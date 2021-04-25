@@ -8,7 +8,7 @@ public class City {
 
     @Id
     @GeneratedValue
-    private Long ID;
+    private Long id;
 
     private String name;
     private String countryCode;
@@ -20,8 +20,8 @@ public class City {
 
     }
 
-    public City(long ID, String name, String countryCode, Double latitude, Double longitude) {
-        this.ID = ID;
+    public City(long id, String name, String countryCode, Double latitude, Double longitude) {
+        this.id = id;
         this.name = name;
         this.countryCode = countryCode;
         this.latitude = latitude;
@@ -31,7 +31,7 @@ public class City {
     /*------------ Getters ------------*/
 
     public long getID() {
-        return ID;
+        return id;
     }
 
     public String getName() {
@@ -50,8 +50,8 @@ public class City {
         return longitude;
     }
 
-    public void setID(long ID) {
-        this.ID = ID;
+    public void setID(long id) {
+        this.id = id;
     }
 
     public void setName(String name) {
