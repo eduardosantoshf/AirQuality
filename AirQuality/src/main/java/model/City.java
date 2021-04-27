@@ -16,7 +16,7 @@ public class City {
     private Double latitude, longitude;
     private Integer aqi; // Air Quality Index [US - EPA standard 0 - +500]
     private Double co; // Concentration of carbon monoxide (µg/m³)
-    private String predominantPollenType;
+    private String predominantPollenType; // Trees / Weeds / Molds / Grasses
 
     /*---------- Constructors ----------*/
 
