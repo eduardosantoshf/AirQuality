@@ -24,8 +24,7 @@ public class City {
 
     }
 
-    public City(Long id, String name, String countryCode, Double latitude, Double longitude, Integer aqi, Double co, String predominantPollenType) {
-        this.id = id;
+    public City(String name, String countryCode, Double latitude, Double longitude, Integer aqi, Double co, String predominantPollenType) {
         this.name = name;
         this.countryCode = countryCode;
         this.latitude = latitude;
