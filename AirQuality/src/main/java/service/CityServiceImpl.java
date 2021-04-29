@@ -27,7 +27,7 @@ public class CityServiceImpl implements CityService{
         return null;
     }
 
-    public String consumeFromAPI(String url) throws IOException, URISyntaxException {
+    public City consumeFromAPI(String url) throws IOException, URISyntaxException {
         HTTPClient httpClient = new HTTPClient();
         URIBuilder uriBuilder = new URIBuilder(url);
 
@@ -41,13 +41,24 @@ public class CityServiceImpl implements CityService{
             Double lat = Double.parseDouble(fullJSON.get("lat").toString());
             Double lon = Double.parseDouble(fullJSON.get("lon").toString());
 
+            // ainda não sei como é que vou buscar um valor dentro de um objeto dentro de um array
+            //Integer aqi = (Integer) data.get(0)
+
             JSONArray data = new JSONArray(fullJSON.get("data").toString());
 
-            // ainda não sei como é que vou buscar um valor dentro de um objeto dentro de um array
-           //Integer aqi = (Integer) data.get(0)
+            JSONObject dataObject = (JSONObject) data.get(0);
+
+            Integer aqi = (Integer) dataObject.get("aqi"); // not sure this will work
+            Double co = Double.parseDouble(dataObject.get("co").toString()); // not sure this will work
+            String predominantPollenType = (String) dataObject.get("predominant_pollen_type"); // not sure this will work
+
+            City city = new City(name, countryCode, lat, lon, aqi, co, predominantPollenType);
+
+            return city;
 
         } catch (JSONException e) {
             e.printStackTrace();
+            return null;
         }
     }
 }
