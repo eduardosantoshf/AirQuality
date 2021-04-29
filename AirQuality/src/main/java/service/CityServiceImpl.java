@@ -1,27 +1,22 @@
 package service;
 
 import model.City;
-import org.apache.http.HttpEntity;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
 
 import javax.swing.text.html.parser.Entity;
 import javax.transaction.Transactional;
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 @Service
 @Transactional
 public class CityServiceImpl implements CityService{
-    private final String url = "http://api.weatherbit.io/v2.0/current/airquality";
-    private final String key = "21d09b87cc3f45d8ab6b568dbd0823c7";
-
-    private CloseableHttpClient httpClient;
-
     @Override
     public City getCityByName() {
         return null;
@@ -32,19 +27,27 @@ public class CityServiceImpl implements CityService{
         return null;
     }
 
-    public String consumeFromAPI(String url) throws IOException {
-        String APIResponse = null;
+    public String consumeFromAPI(String url) throws IOException, URISyntaxException {
+        HTTPClient httpClient = new HTTPClient();
+        URIBuilder uriBuilder = new URIBuilder(url);
 
-        HttpGet httpGet = new HttpGet(url + "&key=" + key);
-        CloseableHttpResponse httpResponse = httpClient.execute(httpGet);
+        String response = httpClient.makeRequest(uriBuilder.build().toString());
 
         try {
-            HttpEntity entity = httpResponse.getEntity();
-            APIResponse = EntityUtils.toString(entity);
-        } catch (Exception e) {
-            System.err.println(e);
-        }
+            JSONObject fullJSON = (JSONObject) new JSONObject(response);
 
-        return APIResponse;
+            String name = (String) fullJSON.get("city_name");
+            String countryCode = (String) fullJSON.get("country_code");
+            Double lat = Double.parseDouble(fullJSON.get("lat").toString());
+            Double lon = Double.parseDouble(fullJSON.get("lon").toString());
+
+            JSONArray data = new JSONArray(fullJSON.get("data").toString());
+
+            // ainda não sei como é que vou buscar um valor dentro de um objeto dentro de um array
+           //Integer aqi = (Integer) data.get(0)
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 }

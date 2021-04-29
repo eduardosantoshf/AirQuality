@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fdae2b5-69ff-409a-863b-1884bc5b705b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AirQuality.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AirQuality.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_core5_httpcore5_5_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/CityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CityServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +52,19 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -71,7 +80,8 @@
       <workItem from="1619366516455" duration="13349000" />
       <workItem from="1619474719026" duration="2705000" />
       <workItem from="1619482309801" duration="106000" />
-      <workItem from="1619482436965" duration="1595000" />
+      <workItem from="1619482436965" duration="1693000" />
+      <workItem from="1619650486865" duration="3072000" />
     </task>
     <servers />
   </component>
@@ -105,10 +115,10 @@
       <screen x="0" y="25" width="1680" height="962" />
     </state>
     <state x="578" y="257" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/33.-875.1600.875/0.25.1680.962@0.25.1680.962" timestamp="1619378349037" />
-    <state x="498" y="259" key="Maven.ArtifactSearchDialog" timestamp="1619483982473">
+    <state x="498" y="259" key="Maven.ArtifactSearchDialog" timestamp="1619653940619">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="498" y="259" key="Maven.ArtifactSearchDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1619483982473" />
+    <state x="498" y="259" key="Maven.ArtifactSearchDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1619653940619" />
     <state x="469" y="236" key="SettingsEditor" timestamp="1619482556644">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
