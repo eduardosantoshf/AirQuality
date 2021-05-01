@@ -1,15 +1,13 @@
-package service;
+package airquality.service;
 
-import model.City;
+import airquality.model.City;
 import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
 
-import javax.swing.text.html.parser.Entity;
 import javax.transaction.Transactional;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -21,14 +19,14 @@ public class CityServiceImpl implements CityService{
 
     @Override
     public City getCityByName(String name) throws IOException, URISyntaxException {
-        City city = consumeFromAPI(url + "&city=" + name);
+        City city = consumeFromAPI(url + "?city=" + name);
 
         return city;
     }
 
     @Override
     public City getCityByLatAndLon(Double lat, Double lon) throws IOException, URISyntaxException {
-        City city = consumeFromAPI(url + "&lat=" + lat + "&lon=" + lon);
+        City city = consumeFromAPI(url + "?lat=" + lat + "&lon=" + lon);
 
         return city;
     }

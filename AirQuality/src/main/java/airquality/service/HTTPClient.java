@@ -1,4 +1,4 @@
-package service;
+package airquality.service;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;

@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fdae2b5-69ff-409a-863b-1884bc5b705b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AirQuality.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AirQuality.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airquality/service/CityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/CityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/CityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/model/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/repository/CityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/CityService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/CityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/service/CityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/HTTPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/service/HTTPClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +45,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -52,6 +58,37 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AirQualityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="AirQuality" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="airquality.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="airquality.AirQualityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.AirQualityApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -71,7 +108,7 @@
       <workItem from="1619482436965" duration="1693000" />
       <workItem from="1619650486865" duration="3775000" />
       <workItem from="1619733713264" duration="36000" />
-      <workItem from="1619903100357" duration="297000" />
+      <workItem from="1619903100357" duration="1995000" />
     </task>
     <servers />
   </component>
@@ -91,20 +128,64 @@
       <screen x="0" y="25" width="1680" height="962" />
     </state>
     <state x="578" y="279" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/33.-875.1600.875/0.25.1680.962@0.25.1680.962" timestamp="1619372621204" />
-    <state x="424" y="259" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619482369840">
+    <state x="424" y="259" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619904766212">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="424" y="259" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1619482369840" />
+    <state x="424" y="259" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1619904766212" />
     <state x="773" y="281" key="#com.intellij.ide.util.MemberChooser" timestamp="1619477141933">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="773" y="281" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1200@0.0.1920.1200" timestamp="1619477141933" />
     <state x="773" y="285" key="#com.intellij.ide.util.MemberChooser/0.25.1920.1112@0.25.1920.1112" timestamp="1619139331617" />
     <state x="676" y="250" key="#com.intellij.ide.util.MemberChooser/33.-875.1600.875/0.25.1680.962@0.25.1680.962" timestamp="1619379530092" />
+    <state x="524" y="528" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1619904729981">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="524" y="528" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1619904729981" />
     <state x="578" y="257" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619378349037">
       <screen x="0" y="25" width="1680" height="962" />
     </state>
     <state x="578" y="257" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/33.-875.1600.875/0.25.1680.962@0.25.1680.962" timestamp="1619378349037" />
+    <state width="1920" height="554" key="GridCell.Tab.0.bottom" timestamp="1619906250162">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1920" height="554" key="GridCell.Tab.0.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1619906250162" />
+    <state width="1920" height="554" key="GridCell.Tab.0.bottom/0.25.1920.1112@0.25.1920.1112" timestamp="1619904997319" />
+    <state width="1920" height="554" key="GridCell.Tab.0.center" timestamp="1619906250153">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1920" height="554" key="GridCell.Tab.0.center/0.0.1920.1200@0.0.1920.1200" timestamp="1619906250153" />
+    <state width="1920" height="554" key="GridCell.Tab.0.center/0.25.1920.1112@0.25.1920.1112" timestamp="1619904997318" />
+    <state width="1920" height="554" key="GridCell.Tab.0.left" timestamp="1619906250151">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1920" height="554" key="GridCell.Tab.0.left/0.0.1920.1200@0.0.1920.1200" timestamp="1619906250151" />
+    <state width="1920" height="554" key="GridCell.Tab.0.left/0.25.1920.1112@0.25.1920.1112" timestamp="1619904997317" />
+    <state width="1920" height="554" key="GridCell.Tab.0.right" timestamp="1619906250161">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1920" height="554" key="GridCell.Tab.0.right/0.0.1920.1200@0.0.1920.1200" timestamp="1619906250161" />
+    <state width="1920" height="554" key="GridCell.Tab.0.right/0.25.1920.1112@0.25.1920.1112" timestamp="1619904997319" />
+    <state width="1920" height="554" key="GridCell.Tab.1.bottom" timestamp="1619906250175">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1920" height="554" key="GridCell.Tab.1.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1619906250175" />
+    <state width="1920" height="554" key="GridCell.Tab.1.bottom/0.25.1920.1112@0.25.1920.1112" timestamp="1619904997323" />
+    <state width="1920" height="554" key="GridCell.Tab.1.center" timestamp="1619906250173">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1920" height="554" key="GridCell.Tab.1.center/0.0.1920.1200@0.0.1920.1200" timestamp="1619906250173" />
+    <state width="1920" height="554" key="GridCell.Tab.1.center/0.25.1920.1112@0.25.1920.1112" timestamp="1619904997321" />
+    <state width="1920" height="554" key="GridCell.Tab.1.left" timestamp="1619906250171">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1920" height="554" key="GridCell.Tab.1.left/0.0.1920.1200@0.0.1920.1200" timestamp="1619906250171" />
+    <state width="1920" height="554" key="GridCell.Tab.1.left/0.25.1920.1112@0.25.1920.1112" timestamp="1619904997320" />
+    <state width="1920" height="554" key="GridCell.Tab.1.right" timestamp="1619906250174">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1920" height="554" key="GridCell.Tab.1.right/0.0.1920.1200@0.0.1920.1200" timestamp="1619906250174" />
+    <state width="1920" height="554" key="GridCell.Tab.1.right/0.25.1920.1112@0.25.1920.1112" timestamp="1619904997322" />
     <state x="498" y="259" key="Maven.ArtifactSearchDialog" timestamp="1619653940619">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
