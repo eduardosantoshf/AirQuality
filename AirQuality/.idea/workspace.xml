@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2fdae2b5-69ff-409a-863b-1884bc5b705b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/AirQuality.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AirQuality.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_core5_httpcore5_5_0_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/CityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/CityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CityServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,19 +53,6 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -81,7 +69,9 @@
       <workItem from="1619474719026" duration="2705000" />
       <workItem from="1619482309801" duration="106000" />
       <workItem from="1619482436965" duration="1693000" />
-      <workItem from="1619650486865" duration="3072000" />
+      <workItem from="1619650486865" duration="3775000" />
+      <workItem from="1619733713264" duration="36000" />
+      <workItem from="1619903100357" duration="297000" />
     </task>
     <servers />
   </component>
