@@ -5,6 +5,6 @@ import model.City;
 import java.util.List;
 
 public interface CityService {
-    City getCityByName();
-    City getCityByLatAndLon();
+    City getCityByName(String name);
+    City getCityByLatAndLon(Double lat, Double lon);
 }
