@@ -17,14 +17,20 @@ import java.net.URISyntaxException;
 @Service
 @Transactional
 public class CityServiceImpl implements CityService{
+    private final String url = "http://api.weatherbit.io/v2.0/current/airquality";
+
     @Override
-    public City getCityByName() {
-        return null;
+    public City getCityByName(String name) throws IOException, URISyntaxException {
+        City city = consumeFromAPI(url + "&city=" + name);
+
+        return city;
     }
 
     @Override
-    public City getCityByLatAndLon() {
-        return null;
+    public City getCityByLatAndLon(Double lat, Double lon) throws IOException, URISyntaxException {
+        City city = consumeFromAPI(url + "&lat=" + lat + "&lon=" + lon);
+
+        return city;
     }
 
     public City consumeFromAPI(String url) throws IOException, URISyntaxException {

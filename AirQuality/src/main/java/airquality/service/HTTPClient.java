@@ -10,7 +10,6 @@ import org.apache.http.util.EntityUtils;
 import java.io.IOException;
 
 public class HTTPClient {
-    private final String url = "http://api.weatherbit.io/v2.0/current/airquality";
     private final String key = "21d09b87cc3f45d8ab6b568dbd0823c7";
 
     private CloseableHttpClient httpClient;
