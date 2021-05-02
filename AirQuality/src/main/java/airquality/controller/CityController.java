@@ -26,4 +26,11 @@ public class CityController {
 
         return city;
     }
+
+    @GetMapping("/city/{lat}/{lon}")
+    public City getCityByLatAndLon(@PathVariable(value = "lat") Double lat, @PathVariable(value = "lon") Double lon) throws IOException, URISyntaxException {
+        City city = cityService.getCityByLatAndLon(lat, lon);
+
+        return city;
+    }
 }
