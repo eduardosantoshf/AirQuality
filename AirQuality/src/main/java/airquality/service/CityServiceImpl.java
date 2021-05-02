@@ -1,5 +1,6 @@
 package airquality.service;
 
+import airquality.cache.CityCache;
 import airquality.model.City;
 import org.apache.http.client.utils.URIBuilder;
 import org.json.JSONArray;
@@ -16,10 +17,18 @@ import java.net.URISyntaxException;
 @Transactional
 public class CityServiceImpl implements CityService{
     private final String url = "http://api.weatherbit.io/v2.0/current/airquality";
+    private CityCache<String, City> cityCache = new CityCache<>(20);
 
     @Override
     public City getCityByName(String name) throws IOException, URISyntaxException {
-        City city = consumeFromAPI(url + "?city=" + name);
+        City city = cityCache.get(name.toLowerCase());
+
+        if(city == null) {
+            city = consumeFromAPI(url + "?city=" + name);
+
+            if(city != null)
+                cityCache.put(name.toLowerCase(), city);
+        }
 
         return city;
     }
@@ -45,16 +54,13 @@ public class CityServiceImpl implements CityService{
             Double lat = Double.parseDouble(fullJSON.get("lat").toString());
             Double lon = Double.parseDouble(fullJSON.get("lon").toString());
 
-            // ainda não sei como é que vou buscar um valor dentro de um objeto dentro de um array
-            //Integer aqi = (Integer) data.get(0)
-
             JSONArray data = new JSONArray(fullJSON.get("data").toString());
 
             JSONObject dataObject = (JSONObject) data.get(0);
 
-            Integer aqi = (Integer) dataObject.get("aqi"); // not sure this will work
-            Double co = Double.parseDouble(dataObject.get("co").toString()); // not sure this will work
-            String predominantPollenType = (String) dataObject.get("predominant_pollen_type"); // not sure this will work
+            Integer aqi = (Integer) dataObject.get("aqi");
+            Double co = Double.parseDouble(dataObject.get("co").toString());
+            String predominantPollenType = (String) dataObject.get("predominant_pollen_type");
 
             City city = new City(name, countryCode, lat, lon, aqi, co, predominantPollenType);
 
