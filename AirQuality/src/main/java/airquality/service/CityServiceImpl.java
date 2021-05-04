@@ -12,18 +12,19 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Map;
 
 @Service
 @Transactional
 public class CityServiceImpl implements CityService{
     private final String url = "http://api.weatherbit.io/v2.0/current/airquality";
-    private CityCache<String, City> cityCache = new CityCache<>(20);
+    private final CityCache<String, City> cityCache = new CityCache<>(3); // maximum number of Cities to save, if passed, the first city in cache is the first city to be removed (FIFO)
 
     @Override
     public City getCityByName(String name) throws IOException, URISyntaxException {
         City city = cityCache.get(name.toLowerCase());
 
-        if(city == null) {
+        if (city == null) {
             city = consumeFromAPI(url + "?city=" + name);
 
             if(city != null)
@@ -38,6 +39,11 @@ public class CityServiceImpl implements CityService{
         City city = consumeFromAPI(url + "?lat=" + lat + "&lon=" + lon);
 
         return city;
+    }
+
+    @Override
+    public Map<String, Object> getCacheDetails() {
+        return cityCache.getCacheDetails();
     }
 
     public City consumeFromAPI(String url) throws IOException, URISyntaxException {
