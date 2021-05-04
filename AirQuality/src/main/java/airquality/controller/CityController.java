@@ -10,6 +10,7 @@ import airquality.service.CityService;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Map;
 
 @RestController
 public class CityController {
@@ -32,5 +33,10 @@ public class CityController {
         City city = cityService.getCityByLatAndLon(lat, lon);
 
         return city;
+    }
+
+    @GetMapping("/cacheDetails")
+    public Map<String, Object> getCacheDetails() {
+        return cityService.getCacheDetails();
     }
 }
