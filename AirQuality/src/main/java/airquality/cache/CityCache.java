@@ -7,7 +7,7 @@ public class CityCache<K, V> {
     private Map<K, CityCacheItem> cacheMap;
     private CityCacheItem first, last;
     private int size;
-    private final int CAPACITY;
+    private final int CAPACITY; // maximum number of Cities to save
     private int hitCount = 0;
     private int missCount = 0;
 
@@ -29,14 +29,19 @@ public class CityCache<K, V> {
     }
 
     public V get(K key) {
-        if (!cacheMap.containsKey(key)) return null;
+        if (!cacheMap.containsKey(key)) {
+            this.missCount++;
+            return null;
+        } else {
 
-        CityCacheItem node = (CityCacheItem) cacheMap.get(key);
+            CityCacheItem node = (CityCacheItem) cacheMap.get(key);
 
-        node.incrementHitCount();
-        reorder(node);
+            this.hitCount++;
+            node.incrementHitCount();
+            reorder(node);
 
-        return (V) node.getValue();
+            return (V) node.getValue();
+        }
     }
 
     public void delete(K key) {
@@ -67,25 +72,51 @@ public class CityCache<K, V> {
     }
 
     private void reorder(CityCacheItem node) {
-        if (last == node) return;
-
-        if (first == node) first = node.getNext();
-        else node.getPrev().setNext(node.getNext());
-
-        last.setNext(node);
-        node.setPrev(last);
-        node.setNext(null);
-        last = node;
+        if(last == node) {
+            return;
+        }
+        CityCacheItem nextNode = node.getNext();
+        while (nextNode != null) {
+            if(nextNode.getHitCount() > node.getHitCount()) {
+                break;
+            }
+            if(first == node) {
+                first = nextNode;
+            }
+            if(node.getPrev() != null) {
+                node.getPrev().setNext(nextNode);
+            }
+            nextNode.setPrev(node.getPrev());
+            node.setPrev(nextNode);
+            node.setNext(nextNode.getNext());
+            if(nextNode.getNext() != null) {
+                nextNode.getNext().setPrev(node);
+            }
+            nextNode.setNext(node);
+            nextNode = node.getNext();
+        }
+        if(node.getNext() == null) {
+            last = node;
+        }
     }
 
     public int size() {
-        return size;
+        return this.size;
     }
     public int getHitCount() {
-        return hitCount;
+        return this.hitCount;
     }
 
     public int getMissCount() {
-        return missCount;
+        return this.missCount;
+    }
+
+    public Map<String, Object> getCacheDetails() {
+        Map<String, Object> detailsMap = new HashMap<>();
+
+        detailsMap.put("hits", getHitCount());
+        detailsMap.put("misses", getMissCount());
+
+        return detailsMap;
     }
 }
