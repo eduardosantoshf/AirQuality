@@ -9,9 +9,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airquality/cache/CityCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/cache/CityCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/controller/CityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/service/CityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/service/CityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/service/CityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/service/CityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/cache/CityTTLCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/cache/CityTTLCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/model/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/model/City.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +51,28 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CityCacheTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CityCacheTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AirQuality" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aiquality.cache.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="aiquality.cache" />
+      <option name="MAIN_CLASS_NAME" value="aiquality.cache.CityCacheTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -79,6 +93,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CityCacheTest" />
         <item itemvalue="Spring Boot.AirQualityApplication" />
       </list>
     </recent_temporary>
@@ -106,6 +121,8 @@
       <workItem from="1619987501417" duration="4014000" />
       <workItem from="1620056782329" duration="214000" />
       <workItem from="1620163311534" duration="3958000" />
+      <workItem from="1620219318917" duration="200000" />
+      <workItem from="1620249067731" duration="5217000" />
     </task>
     <servers />
   </component>
