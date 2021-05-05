@@ -10,6 +10,7 @@ public class CityCache<K, V> {
     private final int CAPACITY; // maximum number of Cities to save
     private int hitCount = 0;
     private int missCount = 0;
+    private int requestCount = 0;
 
     public CityCache(int capacity) {
         CAPACITY = capacity;
@@ -29,6 +30,8 @@ public class CityCache<K, V> {
     }
 
     public V get(K key) {
+        this.requestCount++;
+
         if (!cacheMap.containsKey(key)) {
             this.missCount++;
             return null;
@@ -111,11 +114,16 @@ public class CityCache<K, V> {
         return this.missCount;
     }
 
+    public int getRequestCount() {
+        return this.requestCount;
+    }
+
     public Map<String, Object> getCacheDetails() {
         Map<String, Object> detailsMap = new HashMap<>();
 
         detailsMap.put("hits", getHitCount());
         detailsMap.put("misses", getMissCount());
+        detailsMap.put("requests", getRequestCount());
 
         return detailsMap;
     }

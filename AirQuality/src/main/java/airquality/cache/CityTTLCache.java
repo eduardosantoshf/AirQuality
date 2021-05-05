@@ -70,12 +70,6 @@ public class CityTTLCache<K, V> {
         }
     }
 
-    public void remove(String key) {
-        synchronized (data) {
-            data.remove(key);
-        }
-    }
-
     public void refresh() {
 
         long now = System.currentTimeMillis();
@@ -97,6 +91,28 @@ public class CityTTLCache<K, V> {
             }
 
             Thread.yield();
+        }
+    }
+
+    public void clean() {
+        synchronized (data) {
+            data = new HashMap<>();
+            requests = 0;
+            hits = 0;
+            misses = 0;
+            lastRefresh = System.currentTimeMillis();
+        }
+    }
+
+    public void remove(String key) {
+        synchronized (data) {
+            data.remove(key);
+        }
+    }
+
+    public int size() {
+        synchronized (data) {
+            return data.size();
         }
     }
 

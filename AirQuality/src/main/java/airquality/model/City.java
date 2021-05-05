@@ -20,8 +20,8 @@ public class City {
 
     /*---------- Constructors ----------*/
 
-    public City() {
-
+    public City(String name) {
+        this.name = name;
     }
 
     public City(String name, String countryCode, Double latitude, Double longitude, Integer aqi, Double co, String predominantPollenType) {
