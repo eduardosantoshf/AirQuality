@@ -1,6 +1,7 @@
 package airquality.service;
 
 import airquality.cache.CityCache;
+import airquality.cache.CityTTLCache;
 import airquality.model.City;
 import org.apache.http.client.utils.URIBuilder;
 import org.json.JSONArray;
@@ -18,7 +19,14 @@ import java.util.Map;
 @Transactional
 public class CityServiceImpl implements CityService{
     private final String url = "http://api.weatherbit.io/v2.0/current/airquality";
-    private final CityCache<String, City> cityCache = new CityCache<>(3); // maximum number of Cities to save, if passed, the first city in cache is the first city to be removed (FIFO)
+
+    /*
+     * CACHE:
+     * I used two types of cache, one that uses a maximum number of items and other that uses TTl (time to leave), just uncomment the one to be used
+     */
+
+    //private final CityCache<String, City> cityCache = new CityCache<>(3); // maximum number of Cities to save, if passed, the first city in cache is the first city to be removed (FIFO)
+    private CityTTLCache<String, City> cityCache = new CityTTLCache<>(60, 60);
 
     @Override
     public City getCityByName(String name) throws IOException, URISyntaxException {
