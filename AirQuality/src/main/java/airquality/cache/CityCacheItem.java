@@ -19,24 +19,12 @@ public class CityCacheItem<K, V> {
         return key;
     }
 
-    public void setKey(K key) {
-        this.key = key;
-    }
-
     public V getValue() {
         return value;
     }
 
-    public void setValue(V value) {
-        this.value = value;
-    }
-
     public int getHitCount() {
         return hitCount;
-    }
-
-    public void setHitCount(int hitCount) {
-        this.hitCount = hitCount;
     }
 
     public CityCacheItem getPrev() {
