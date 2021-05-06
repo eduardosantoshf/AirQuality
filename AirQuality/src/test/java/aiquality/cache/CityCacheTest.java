@@ -62,4 +62,22 @@ public class CityCacheTest {
 
         assertEquals(1, cityCache.getHitCount());
     }
+
+    @Test
+    public void getMissCountTest() {
+        cityCache.get("Aveiro");
+
+        assertEquals(1, cityCache.getMissCount());
+    }
+
+    @Test
+    public void getRequestCountTest() {
+        City aveiro = new City("Aveiro");
+
+        cityCache.put("Aveiro", aveiro);
+        cityCache.get("Aveiro");
+        cityCache.get("Porto");
+
+        assertEquals(2, cityCache.getRequestCount());
+    }
 }
