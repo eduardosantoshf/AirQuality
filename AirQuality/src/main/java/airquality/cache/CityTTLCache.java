@@ -104,7 +104,7 @@ public class CityTTLCache<K, V> {
         }
     }
 
-    public void remove(String key) {
+    public void delete(String key) {
         synchronized (data) {
             data.remove(key);
         }
@@ -126,22 +126,6 @@ public class CityTTLCache<K, V> {
 
     public int getMisses() {
         return misses;
-    }
-
-    public long getTimeToLive() {
-        return timeToLive;
-    }
-
-    public long getTimer() {
-        return timer;
-    }
-
-    public long getLastRefresh() {
-        return lastRefresh;
-    }
-
-    public Map<K, CacheObject> getData() {
-        return data;
     }
 
     public Map<String, Object> getCacheDetails() {
