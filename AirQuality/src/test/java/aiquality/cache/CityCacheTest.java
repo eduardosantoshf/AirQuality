@@ -1,8 +1,11 @@
 package aiquality.cache;
 
 import airquality.cache.CityCache;
+import airquality.cache.CityCacheItem;
 import airquality.model.City;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,8 +13,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CityCacheTest {
     private static CityCache<String, City> cityCache;
 
-    @BeforeAll
-    static void setUp() {
+    @BeforeEach
+    public void setUp() {
         cityCache = new CityCache<>(2);
     }
 
@@ -39,10 +42,24 @@ public class CityCacheTest {
 
         cityCache.delete("Aveiro");
 
-        assertEquals(cacheSize, cityCache.size() + 1);
+        assertEquals(cityCache.size() + 1, cacheSize);
     }
 
     @Test
-    public void
+    public void sizeTest() {
+        City aveiro = new City("Aveiro");
+        cityCache.put("Aveiro", aveiro);
 
+        assertEquals(1, cityCache.size());
+    }
+
+    @Test
+    public void getHitCountTest() {
+        City aveiro = new City("Aveiro");
+        cityCache.put("Aveiro", aveiro);
+
+        cityCache.get("Aveiro");
+
+        assertEquals(1, cityCache.getHitCount());
+    }
 }
