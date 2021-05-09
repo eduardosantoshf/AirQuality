@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -11,33 +11,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" th:href="@{assets/images/favicon.png}" type="image/png">
+    <link rel="shortcut icon" href="../static/assets/images/favicon.png" type="image/png">
         
     <!--====== Animate CSS ======-->
-    <link rel="stylesheet" th:href="@{assets/css/animate.css}">
+    <link rel="stylesheet" href="../static/assets/css/animate.css">
         
     <!--====== Magnific Popup CSS ======-->
-    <link rel="stylesheet" th:href="@{assets/css/magnific-popup.css}">
+    <link rel="stylesheet" href="../static/assets/css/magnific-popup.css">
         
     <!--====== Slick CSS ======-->
-    <link rel="stylesheet" th:href="@{assets/css/slick.css}">
+    <link rel="stylesheet" href="../static/assets/css/slick.css">
         
     <!--====== Line Icons CSS ======-->
-    <link rel="stylesheet" th:href="@{assets/css/LineIcons.css}">
+    <link rel="stylesheet" href="../static/assets/css/LineIcons.css">
         
     <!--====== Font Awesome CSS ======-->
-    <link rel="stylesheet" th:href="@{assets/css/font-awesome.min.css}">
+    <link rel="stylesheet" href="../static/assets/css/font-awesome.min.css">
         
     <!--====== Bootstrap CSS ======-->
-    <link rel="stylesheet" hth:href="@{assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
     
     <!--====== Default CSS ======-->
-    <link rel="stylesheet" th:href="@{assets/css/default.css}">
+    <link rel="stylesheet" href="../static/assets/css/default.css">
     
     <!--====== Style CSS ======-->
-    <link rel="stylesheet" th:href="@{assets/css/style.css}">
+    <link rel="stylesheet" href="../static/assets/css/style.css">
     
 </head>
+
+
 
 <body>
     <!--[if IE]>
@@ -97,7 +99,7 @@
             </div> <!-- container -->
         </div> <!-- navbar area -->
         
-        <div id="home" class="header-hero bg_cover" th:style="'background-image:url(' + @{assets/images/banner-bg.svg} + ');'">
+        <div id="home" class="header-hero bg_cover" style="background-image: url(../static/assets/images/banner-bg.svg)">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -111,7 +113,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
-                            <img th:src="@{assets/images/wind.png}" width="200" height="200" alt="hero">
+                            <img src="../static/assets/images/wind.png" width="200" height="200" alt="hero">
                         </div> <!-- header hero image -->
                     </div>
                 </div> <!-- row -->
@@ -166,14 +168,13 @@
                         <div class="subscribe-form mt-50">
                             <form action="#">
                                 <input type="text" placeholder="Enter city">
-                                <button class="btn submit-btn" >Search</button>
+                                <button class="btn" id="searchBtn">Search</button>
                             </form>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="subscribe-content mt-50">
-                            <div>
-                                texto
+                            <div class="tfclear">
                             </div>
                         </div>
                     </div>
@@ -252,41 +253,68 @@
 
 
     <!--====== Jquery js ======-->
-    <script th:src="@{assets/js/vendor/jquery-1.12.4.min.js}"></script>
-    <script th:src="@{assets/js/vendor/modernizr-3.7.1.min.js}"></script>
+    <script src="../static/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="../static/assets/js/vendor/modernizr-3.7.1.min.js"></script>
     
     <!--====== Bootstrap js ======-->
-    <script th:src="@{assets/js/popper.min.js}"></script>
-    <script th:src="@{assets/js/bootstrap.min.js}"></script>
+    <script src="../static/assets/js/popper.min.js"></script>
+    <script src="../static/assets/js/bootstrap.min.js"></script>
     
     <!--====== Plugins js ======-->
-    <script th:src="@{assets/js/plugins.js}"></script>
+    <script src="../static/assets/js/plugins.js"></script>
     
     <!--====== Slick js ======-->
-    <script th:src="@{assets/js/slick.min.js}"></script>
+    <script src="../static/assets/js/slick.min.js"></script>
     
     <!--====== Ajax Contact js ======-->
-    <script th:src="@{assets/js/ajax-contact.js}"></script>
+    <script src="../static/assets/js/ajax-contact.js"></script>
     
     <!--====== Counter Up js ======-->
-    <script th:src="@{assets/js/waypoints.min.js}"></script>
-    <script th:src="@{assets/js/jquery.counterup.min.js}"></script>
+    <script src="../static/assets/js/waypoints.min.js"></script>
+    <script src="../static/assets/js/jquery.counterup.min.js"></script>
     
     <!--====== Magnific Popup js ======-->
-    <script th:src="@{assets/js/jquery.magnific-popup.min.js}"></script>
+    <script src="../static/assets/js/jquery.magnific-popup.min.js"></script>
     
     <!--====== Scrolling Nav js ======-->
-    <script th:src="@{assets/js/jquery.easing.min.js}"></script>
-    <script th:src="@{assets/js/scrolling-nav.js}"></script>
+    <script src="../static/assets/js/jquery.easing.min.js"></script>
+    <script src="../static/assets/js/scrolling-nav.js"></script>
     
     <!--====== wow js ======-->
-    <script th:src="@{assets/js/wow.min.js}"></script>
+    <script src="../static/assets/js/wow.min.js"></script>
     
     <!--====== Particles js ======-->
-    <script th:src="@{assets/js/particles.min.js}"></script>
+    <script src="../static/assets/js/particles.min.js"></script>
     
     <!--====== Main js ======-->
-    <script th:src="@{assets/js/main.js}"></script>
+    <script src="../static/assets/js/main.js"></script>
+
+    <script>
+        function callAjax()
+        {
+            var url = "http://localhost:8080/city/Aveiro"
+            $.ajax({
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                url: url,  
+                success: function(data) 
+                {
+                    console.log(data);
+                    $('.tfclear').append(JSON.stringify(data, undefined, 2));
+                    
+                },
+                error: function(err)
+                {
+                    // throw error
+                }
+            });
+        }
+        
+        $('#searchBtn').on('click', function(){
+            callAjax();
+        });
+    </script>
     
 </body>
 
