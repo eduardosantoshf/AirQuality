@@ -213,6 +213,30 @@
                  </div> <!-- row -->
             </div> <!-- subscribe area -->
 
+            <div style="height: 40px;"></div>
+            <div class="footer-copyright"></div>
+
+            <div class="subscribe-area wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="subscribe-content mt-45">
+                            <h2 class="subscribe-title"><span>Cache Details</span></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="subscribe-form3 mt-55">
+                            <button class="btn" id="searchBtn3">Search</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="subscribe-content mt-50">
+                            <div class="tfclear" id="cacheDetails">
+                            </div>
+                        </div>
+                    </div>
+                 </div> <!-- row -->
+            </div> <!-- subscribe area -->
+
 
 
 
@@ -374,6 +398,31 @@
 
         $('#searchBtn2').on('click', function(){
             getCityByLatAndLon();
+        });
+
+        function getCacheDetails()
+        {
+            var url = "http://localhost:8080/cacheDetails"
+            $.ajax({
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                url: url,
+                success: function(data) 
+                {
+                    console.log(data);
+                    $('#cacheDetails').append(JSON.stringify(data, undefined, 2));
+                    
+                },
+                error: function(err)
+                {
+                    // throw error
+                }
+            });
+        }
+
+        $('#searchBtn3').on('click', function(){
+            getCacheDetails();
         });
     </script>
     
