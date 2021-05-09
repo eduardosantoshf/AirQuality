@@ -20,6 +20,10 @@ public class City {
 
     /*---------- Constructors ----------*/
 
+    public City() {
+
+    }
+
     public City(String name) {
         this.name = name;
     }
