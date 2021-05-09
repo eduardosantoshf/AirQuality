@@ -167,14 +167,46 @@
                     <div class="col-lg-6">
                         <div class="subscribe-form mt-50">
                             <form action="#">
-                                <input type="text" placeholder="Enter city">
-                                <button class="btn" id="searchBtn">Search</button>
+                                <input type="text" id="cityToBeSearched" placeholder="Enter city">
                             </form>
+                        </div>
+                        <div class="subscribe-form2 mt-10">
+                            <button class="btn" id="searchBtn">Search</button>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="subscribe-content mt-50">
-                            <div class="tfclear">
+                            <div class="tfclear" id="name">
+                            </div>
+                        </div>
+                    </div>
+                 </div> <!-- row -->
+            </div> <!-- subscribe area -->
+
+            <div style="height: 40px;"></div>
+            <div class="footer-copyright"></div>
+
+            <div class="subscribe-area wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="subscribe-content mt-45">
+                            <h2 class="subscribe-title"><span>Which city do you want to search?</span></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="subscribe-form mt-10">
+                            <form action="#">
+                                <input type="text" id="latitude" placeholder="Enter latitude">
+                                <input type="text" id="longitude" placeholder="Enter longitude">
+                            </form>
+                        </div>
+                        <div class="subscribe-form2 mt-10">
+                            <button class="btn" id="searchBtn2">Search</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="subscribe-content mt-50">
+                            <div class="tfclear" id="latAndLon">
                             </div>
                         </div>
                     </div>
@@ -223,6 +255,7 @@
                     </div>
                 </div> <!-- row -->
             </div> <!-- footer copyright -->
+            
         </div> <!-- container -->
         <div id="particles-2"></div>
     </footer>
@@ -290,18 +323,19 @@
     <script src="../static/assets/js/main.js"></script>
 
     <script>
-        function callAjax()
+        function getCityByName()
         {
-            var url = "http://localhost:8080/city/Aveiro"
+            var url = "http://localhost:8080/city/"
+            var cityName = document.getElementById('cityToBeSearched').value;
             $.ajax({
                 type: "GET",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
-                url: url,  
+                url: url + cityName,
                 success: function(data) 
                 {
                     console.log(data);
-                    $('.tfclear').append(JSON.stringify(data, undefined, 2));
+                    $('#name').append(JSON.stringify(data, undefined, 2));
                     
                 },
                 error: function(err)
@@ -312,7 +346,34 @@
         }
         
         $('#searchBtn').on('click', function(){
-            callAjax();
+            getCityByName();
+        });
+
+        function getCityByLatAndLon()
+        {
+            var url = "http://localhost:8080/city/"
+            var lat = document.getElementById('latitude').value;
+            var lon = document.getElementById('longitude').value;
+            $.ajax({
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                url: url + lat + '/' + lon,
+                success: function(data) 
+                {
+                    console.log(data);
+                    $('#latAndLon').append(JSON.stringify(data, undefined, 2));
+                    
+                },
+                error: function(err)
+                {
+                    // throw error
+                }
+            });
+        }
+
+        $('#searchBtn2').on('click', function(){
+            getCityByLatAndLon();
         });
     </script>
     
