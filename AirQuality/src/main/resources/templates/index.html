@@ -1,0 +1,293 @@
+<!doctype html>
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    
+    <!--====== Title ======-->
+    <title>Basic - SaaS Landing Page</title>
+    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" th:href="@{assets/images/favicon.png}" type="image/png">
+        
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" th:href="@{assets/css/animate.css}">
+        
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" th:href="@{assets/css/magnific-popup.css}">
+        
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" th:href="@{assets/css/slick.css}">
+        
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" th:href="@{assets/css/LineIcons.css}">
+        
+    <!--====== Font Awesome CSS ======-->
+    <link rel="stylesheet" th:href="@{assets/css/font-awesome.min.css}">
+        
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" hth:href="@{assets/css/bootstrap.min.css}">
+    
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" th:href="@{assets/css/default.css}">
+    
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" th:href="@{assets/css/style.css}">
+    
+</head>
+
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->    
+   
+   
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+    
+    <!--====== HEADER PART START ======-->
+    
+    <header class="header-area">
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <h4 class="header-title wow fadeInUp">AirQuality</h4>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#home">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#features">Try It!</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navbar area -->
+        
+        <div id="home" class="header-hero bg_cover" th:style="'background-image:url(' + @{assets/images/banner-bg.svg} + ');'">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="header-hero-content text-center">
+                            <h2 class="header-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">AirQuality</h2>
+                            <h4 class="text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">Details on air quality for a specific city</h4>
+                            <a href="#features" class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1s">Get Started</a>
+                        </div> <!-- header hero content -->
+                    </div>
+                </div> <!-- row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
+                            <img th:src="@{assets/images/wind.png}" width="200" height="200" alt="hero">
+                        </div> <!-- header hero image -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <div id="particles-1" class="particles"></div>
+        </div> <!-- header hero -->
+    </header>
+    
+    <!--====== HEADER PART ENDS ======-->
+    
+    <!--====== SERVICES PART START ======-->
+    
+    <section id="features" class="services-area pt-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-title text-center pb-40">
+                        <div class="line m-auto"></div>
+                        <h5 class="title">Clean and simple design, <span> Comes with everything you need to get started!</span></h5>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row justify-content-center">
+                
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== SERVICES PART ENDS ======-->
+
+
+
+
+
+
+
+
+    
+     
+    <!--====== FOOTER PART START ======-->
+    
+    <footer id="footer" class="footer-area pt-120">
+        <div class="container">
+            <div class="subscribe-area wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="subscribe-content mt-45">
+                            <h2 class="subscribe-title"><span>Which city do you want to search?</span></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="subscribe-form mt-50">
+                            <form action="#">
+                                <input type="text" placeholder="Enter city">
+                                <button class="btn submit-btn" >Search</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="subscribe-content mt-50">
+                            <div>
+                                texto
+                            </div>
+                        </div>
+                    </div>
+                 </div> <!-- row -->
+            </div> <!-- subscribe area -->
+
+
+
+
+
+
+
+            <div class="footer-widget pb-100">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="footer-about mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                            
+                        </div> <!-- footer about -->
+                    </div>
+                    <div class="col-lg-5 col-md-7 col-sm-7">
+                        <div class="footer-link d-flex mt-50 justify-content-md-between">
+                            <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                                
+                            </div> <!-- footer wrapper -->
+                            <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                                
+                            </div> <!-- footer wrapper -->
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-lg-3 col-md-5 col-sm-5">
+                        <div class="footer-contact mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                            
+                        </div> <!-- footer contact -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- footer widget -->
+            <div class="footer-copyright">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright d-sm-flex justify-content-between">
+                            <div class="copyright-content">
+                                <p class="text">2021 - Developed by <a href="https://www.linkedin.com/in/eduardosantoshf/" rel="nofollow"><b>Eduardo Santos</b></a> and Designed by <a href="https://uideck.com" rel="nofollow"><b>UIdeck</b></a></p>
+                                
+                            </div> <!-- copyright content -->
+                        </div> <!-- copyright -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- footer copyright -->
+        </div> <!-- container -->
+        <div id="particles-2"></div>
+    </footer>
+    
+    <!--====== FOOTER PART ENDS ======-->
+    
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->   
+    
+    <!--====== PART START ======-->
+    
+<!--
+    <section class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-"></div>
+            </div>
+        </div>
+    </section>
+-->
+    
+    <!--====== PART ENDS ======-->
+
+
+
+
+    <!--====== Jquery js ======-->
+    <script th:src="@{assets/js/vendor/jquery-1.12.4.min.js}"></script>
+    <script th:src="@{assets/js/vendor/modernizr-3.7.1.min.js}"></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script th:src="@{assets/js/popper.min.js}"></script>
+    <script th:src="@{assets/js/bootstrap.min.js}"></script>
+    
+    <!--====== Plugins js ======-->
+    <script th:src="@{assets/js/plugins.js}"></script>
+    
+    <!--====== Slick js ======-->
+    <script th:src="@{assets/js/slick.min.js}"></script>
+    
+    <!--====== Ajax Contact js ======-->
+    <script th:src="@{assets/js/ajax-contact.js}"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script th:src="@{assets/js/waypoints.min.js}"></script>
+    <script th:src="@{assets/js/jquery.counterup.min.js}"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script th:src="@{assets/js/jquery.magnific-popup.min.js}"></script>
+    
+    <!--====== Scrolling Nav js ======-->
+    <script th:src="@{assets/js/jquery.easing.min.js}"></script>
+    <script th:src="@{assets/js/scrolling-nav.js}"></script>
+    
+    <!--====== wow js ======-->
+    <script th:src="@{assets/js/wow.min.js}"></script>
+    
+    <!--====== Particles js ======-->
+    <script th:src="@{assets/js/particles.min.js}"></script>
+    
+    <!--====== Main js ======-->
+    <script th:src="@{assets/js/main.js}"></script>
+    
+</body>
+
+</html>
