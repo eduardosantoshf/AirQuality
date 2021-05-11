@@ -176,7 +176,26 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="subscribe-content mt-50">
-                            <div class="tfclear" id="name">
+                            <div class="tfclear" id="name1">
+                                <!--Name-->
+                            </div>
+                            <div class="tfclear" id="country1">
+                                <!--Country-->
+                            </div>
+                            <div class="tfclear" id="lat1">
+                                <!--Latitude-->
+                            </div>
+                            <div class="tfclear" id="lon1">
+                                <!--Longitude-->
+                            </div>
+                            <div class="tfclear" id="aqi1">
+                                <!--AQI-->
+                            </div>
+                            <div class="tfclear" id="co1">
+                                <!--Concentration of carbon monoxide (µg/m³)-->
+                            </div>
+                            <div class="tfclear" id="pollen1">
+                                <!--Predominant pollen type-->
                             </div>
                         </div>
                     </div>
@@ -206,7 +225,26 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="subscribe-content mt-50">
-                            <div class="tfclear" id="latAndLon">
+                            <div class="tfclear" id="name2">
+                                <!--Name-->
+                            </div>
+                            <div class="tfclear" id="country2">
+                                <!--Country-->
+                            </div>
+                            <div class="tfclear" id="lat2">
+                                <!--Latitude-->
+                            </div>
+                            <div class="tfclear" id="lon2">
+                                <!--Longitude-->
+                            </div>
+                            <div class="tfclear" id="aqi2">
+                                <!--AQI-->
+                            </div>
+                            <div class="tfclear" id="co2">
+                                <!--Concentration of carbon monoxide (µg/m³)-->
+                            </div>
+                            <div class="tfclear" id="pollen2">
+                                <!--Predominant pollen type-->
                             </div>
                         </div>
                     </div>
@@ -230,7 +268,14 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="subscribe-content mt-50">
-                            <div class="tfclear" id="cacheDetails">
+                            <div class="tfclear" id="requests">
+                                <!--Requests-->
+                            </div>
+                            <div class="tfclear" id="hits">
+                                <!--Hits-->
+                            </div>
+                            <div class="tfclear" id="misses">
+                                <!--Misses-->
                             </div>
                         </div>
                     </div>
@@ -357,9 +402,22 @@
                 dataType: "json",
                 url: url + cityName,
                 success: function(data) 
-                {
+                {   
+                    document.getElementById("name1").innerHTML = "<b>Name: </b>";
+                    document.getElementById("country1").innerHTML = "<b>Country: </b>";
+                    document.getElementById("lat1").innerHTML = "<b>Latitude: </b>";
+                    document.getElementById("lon1").innerHTML = "<b>Longitude: </b>";
+                    document.getElementById("aqi1").innerHTML = "<b>AQI: </b>";
+                    document.getElementById("co1").innerHTML = "<b>Concentration of carbon monoxide (µg/m³): </b>";
+                    document.getElementById("pollen1").innerHTML = "<b>Predominant pollen type: </b>";
                     console.log(data);
-                    $('#name').append(JSON.stringify(data, undefined, 2));
+                    $('#name1').append(JSON.stringify(data.name, undefined, 2));
+                    $('#country1').append(JSON.stringify(data.countryCode, undefined, 2));
+                    $('#lat1').append(JSON.stringify(data.latitude, undefined, 2));
+                    $('#lon1').append(JSON.stringify(data.longitude, undefined, 2));
+                    $('#aqi1').append(JSON.stringify(data.aqi, undefined, 2));
+                    $('#co1').append(JSON.stringify(data.co, undefined, 2));
+                    $('#pollen1').append(JSON.stringify(data.predominantPollenType, undefined, 2));
                     
                 },
                 error: function(err)
@@ -385,8 +443,21 @@
                 url: url + lat + '/' + lon,
                 success: function(data) 
                 {
+                    document.getElementById("name2").innerHTML = "<b>Name: </b>";
+                    document.getElementById("country2").innerHTML = "<b>Country: </b>";
+                    document.getElementById("lat2").innerHTML = "<b>Latitude: </b>";
+                    document.getElementById("lon2").innerHTML = "<b>Longitude: </b>";
+                    document.getElementById("aqi2").innerHTML = "<b>AQI: </b>";
+                    document.getElementById("co2").innerHTML = "<b>Concentration of carbon monoxide (µg/m³): </b>";
+                    document.getElementById("pollen2").innerHTML = "<b>Predominant pollen type: </b>";
                     console.log(data);
-                    $('#latAndLon').append(JSON.stringify(data, undefined, 2));
+                    $('#name2').append(JSON.stringify(data.name, undefined, 2));
+                    $('#country2').append(JSON.stringify(data.countryCode, undefined, 2));
+                    $('#lat2').append(JSON.stringify(data.latitude, undefined, 2));
+                    $('#lon2').append(JSON.stringify(data.longitude, undefined, 2));
+                    $('#aqi2').append(JSON.stringify(data.aqi, undefined, 2));
+                    $('#co2').append(JSON.stringify(data.co, undefined, 2));
+                    $('#pollen2').append(JSON.stringify(data.predominantPollenType, undefined, 2));
                     
                 },
                 error: function(err)
@@ -410,8 +481,13 @@
                 url: url,
                 success: function(data) 
                 {
+                    document.getElementById("requests").innerHTML = "<b>Requests: </b>";
+                    document.getElementById("hits").innerHTML = "<b>Hits: </b>";
+                    document.getElementById("misses").innerHTML = "<b>Misses: </b>";
                     console.log(data);
-                    $('#cacheDetails').append(JSON.stringify(data, undefined, 2));
+                    $('#requests').append(JSON.stringify(data.requests, undefined, 2));
+                    $('#hits').append(JSON.stringify(data.hits, undefined, 2));
+                    $('#misses').append(JSON.stringify(data.misses, undefined, 2));
                     
                 },
                 error: function(err)
