@@ -36,5 +36,5 @@ jobs:
         
       - name: Step 5 - Show files inside the target/ folder
         run: |
-          cd target
+          cd AirQuality/target
           ls -la
