@@ -14,6 +14,8 @@ import javax.transaction.Transactional;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Service
 @Transactional
@@ -53,6 +55,11 @@ public class CityServiceImpl implements CityService{
     }
 
     public City consumeFromAPI(String url) throws IOException, URISyntaxException {
+        // Create a Logger
+        Logger logger
+                = Logger.getLogger(
+                CityTTLCache.class.getName());
+
         HTTPClient httpClient = new HTTPClient();
         URIBuilder uriBuilder = new URIBuilder(url);
 
@@ -80,7 +87,7 @@ public class CityServiceImpl implements CityService{
             return new City(name, countryCode, lat, lon, aqi, co, o3, so2, no2, predominantPollenType);
 
         } catch (JSONException e) {
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "ERROR: ", e);
             return null;
         }
     }
