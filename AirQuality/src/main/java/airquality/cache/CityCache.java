@@ -4,24 +4,25 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CityCache<K, V> {
-    private Map<K, CityCacheItem> cacheMap;
-    private CityCacheItem first, last;
+    private final Map<K, CityCacheItem<K, V>> cacheMap;
+    private CityCacheItem<K, V> first;
+    private CityCacheItem<K, V> last;
     private int size;
-    private final int CAPACITY; // maximum number of Cities to save
+    private final int capacity; // maximum number of Cities to save
     private int hitCount = 0;
     private int missCount = 0;
     private int requestCount = 0;
 
     public CityCache(int capacity) {
-        CAPACITY = capacity;
-        cacheMap = new HashMap<>(CAPACITY);
+        this.capacity = capacity;
+        cacheMap = new HashMap<>(capacity);
     }
 
     public void put(K key, V value) {
-        CityCacheItem node = new CityCacheItem(key, value);
+        CityCacheItem<K, V> node = new CityCacheItem<>(key, value);
 
         if (!cacheMap.containsKey(key)) {
-            if (size() >= CAPACITY) deleteNode(first);
+            if (size() >= capacity) deleteNode(first);
 
             addNodeToLast(node);
         }
@@ -37,13 +38,13 @@ public class CityCache<K, V> {
             return null;
         } else {
 
-            CityCacheItem node = (CityCacheItem) cacheMap.get(key);
+            CityCacheItem<K, V> node = cacheMap.get(key);
 
             this.hitCount++;
             node.incrementHitCount();
             reorder(node);
 
-            return (V) node.getValue();
+            return node.getValue();
         }
     }
 
@@ -51,17 +52,16 @@ public class CityCache<K, V> {
         deleteNode(cacheMap.get(key));
     }
 
-    private void deleteNode(CityCacheItem node) {
+    private void deleteNode(CityCacheItem<K, V> node) {
         if (node == null) return;
         if (last == node) last = node.getPrev();
         if (first == node) first = node.getNext();
 
         cacheMap.remove(node.getKey());
-        node = null;
         size--;
     }
 
-    private void addNodeToLast(CityCacheItem node) {
+    private void addNodeToLast(CityCacheItem<K, V> node) {
         if(last != null) {
             last.setNext(node);
             node.setPrev(last);
@@ -74,11 +74,11 @@ public class CityCache<K, V> {
         size++;
     }
 
-    private void reorder(CityCacheItem node) {
+    private void reorder(CityCacheItem<K, V> node) {
         if(last == node) {
             return;
         }
-        CityCacheItem nextNode = node.getNext();
+        CityCacheItem<K, V> nextNode = node.getNext();
         while (nextNode != null) {
             if(nextNode.getHitCount() > node.getHitCount()) {
                 break;

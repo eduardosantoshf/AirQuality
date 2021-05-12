@@ -18,7 +18,7 @@ import java.util.Map;
 @Service
 @Transactional
 public class CityServiceImpl implements CityService{
-    private static final String url = "http://api.weatherbit.io/v2.0/current/airquality";
+    private static final String URL = "http://api.weatherbit.io/v2.0/current/airquality";
 
     /*
      * CACHE:
@@ -33,7 +33,7 @@ public class CityServiceImpl implements CityService{
         City city = cityCache.get(name.toLowerCase());
 
         if (city == null) {
-            city = consumeFromAPI(url + "?city=" + name);
+            city = consumeFromAPI(URL + "?city=" + name);
 
             if(city != null)
                 cityCache.put(name.toLowerCase(), city);
@@ -44,7 +44,7 @@ public class CityServiceImpl implements CityService{
 
     @Override
     public City getCityByLatAndLon(Double lat, Double lon) throws IOException, URISyntaxException {
-        return consumeFromAPI(url + "?lat=" + lat + "&lon=" + lon);
+        return consumeFromAPI(URL + "?lat=" + lat + "&lon=" + lon);
     }
 
     @Override
@@ -77,9 +77,7 @@ public class CityServiceImpl implements CityService{
             Double no2 = Double.parseDouble(dataObject.get("no2").toString());
             String predominantPollenType = (String) dataObject.get("predominant_pollen_type");
 
-            City city = new City(name, countryCode, lat, lon, aqi, co, o3, so2, no2, predominantPollenType);
-
-            return city;
+            return new City(name, countryCode, lat, lon, aqi, co, o3, so2, no2, predominantPollenType);
 
         } catch (JSONException e) {
             e.printStackTrace();

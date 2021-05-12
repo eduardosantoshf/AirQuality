@@ -12,11 +12,10 @@ public class CityTTLCache<K, V> {
     private int requests;
     private int hits;
     private int misses;
-    private long lastRefresh = System.currentTimeMillis();
 
     protected class CacheObject {
-        public long lastAccessed = System.currentTimeMillis();
-        public V value;
+        long lastAccessed = System.currentTimeMillis();
+        V value;
         protected CacheObject(V value) {
             this.value = value;
         }
@@ -73,7 +72,6 @@ public class CityTTLCache<K, V> {
     public void refresh() {
 
         long now = System.currentTimeMillis();
-        this.lastRefresh = now;
 
         List<K> expiredObjects = new ArrayList<>();
 
@@ -100,7 +98,6 @@ public class CityTTLCache<K, V> {
             requests = 0;
             hits = 0;
             misses = 0;
-            lastRefresh = System.currentTimeMillis();
         }
     }
 

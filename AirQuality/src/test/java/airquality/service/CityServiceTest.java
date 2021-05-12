@@ -31,7 +31,7 @@ class CityServiceTest {
     private CityServiceImpl cityService;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         City aveiro = new City("Aveiro");
         City porto = new City("Porto");
         City lisboa = new City("Lisboa");
@@ -46,7 +46,7 @@ class CityServiceTest {
     }
 
     @Test
-    public void whenValidName_thenCityShouldBeFound() throws IOException, URISyntaxException {
+    void whenValidName_thenCityShouldBeFound() throws IOException, URISyntaxException {
         String name = "Aveiro";
         City foundCity = cityService.getCityByName(name);
 
@@ -54,7 +54,7 @@ class CityServiceTest {
     }
 
     @Test
-    public void whenValidlatAndLon_thenCityShouldBeFound() throws IOException, URISyntaxException {
+    void whenValidlatAndLon_thenCityShouldBeFound() throws IOException, URISyntaxException {
         Double latitude = 40.64;
         Double longitude = -8.64;
         City foundCity = cityService.getCityByLatAndLon(latitude, longitude);

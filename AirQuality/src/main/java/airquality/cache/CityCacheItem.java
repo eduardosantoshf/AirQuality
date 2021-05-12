@@ -1,10 +1,11 @@
 package airquality.cache;
 
 public class CityCacheItem<K, V> {
-    private K key;
-    private V value;
+    private final K key;
+    private final V value;
     private int hitCount = 0;
-    private CityCacheItem prev, next;
+    private CityCacheItem<K, V> prev;
+    private CityCacheItem<K, V> next;
 
     public CityCacheItem(K key, V value) {
         this.key = key;
@@ -27,19 +28,19 @@ public class CityCacheItem<K, V> {
         return hitCount;
     }
 
-    public CityCacheItem getPrev() {
+    public CityCacheItem<K, V> getPrev() {
         return prev;
     }
 
-    public void setPrev(CityCacheItem prev) {
+    public void setPrev(CityCacheItem<K, V> prev) {
         this.prev = prev;
     }
 
-    public CityCacheItem getNext() {
+    public CityCacheItem<K, V> getNext() {
         return next;
     }
 
-    public void setNext(CityCacheItem next) {
+    public void setNext(CityCacheItem<K, V> next) {
         this.next = next;
     }
 }
