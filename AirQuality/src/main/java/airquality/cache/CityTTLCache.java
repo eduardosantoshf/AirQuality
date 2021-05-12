@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 public class CityTTLCache<K, V> {
     private final long timeToLive;
@@ -12,6 +14,7 @@ public class CityTTLCache<K, V> {
     private int requests;
     private int hits;
     private int misses;
+    private final Object lockObj = new Object();
 
     protected class CacheObject {
         long lastAccessed = System.currentTimeMillis();
@@ -22,6 +25,11 @@ public class CityTTLCache<K, V> {
     }
 
     public CityTTLCache(long timeToLive, final long timer) {
+
+        // Create a Logger
+        Logger logger
+                = Logger.getLogger(
+                CityTTLCache.class.getName());
 
         if(timeToLive <= 0 || timer <= 0) throw new IllegalArgumentException("Time to live and timer must be greater than 0!");
 
@@ -36,7 +44,9 @@ public class CityTTLCache<K, V> {
                     try {
                         Thread.sleep(timer * 1000);
                     } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        logger.log(Level.WARNING, "Interrupted!", e);
+                        // Restore interrupted state...
+                        Thread.currentThread().interrupt();
                     }
                     refresh();
                 }
@@ -47,13 +57,13 @@ public class CityTTLCache<K, V> {
     }
 
     public void put(K key, V value) {
-        synchronized (data) {
+        synchronized (lockObj) {
             data.put(key, new CacheObject(value));
         }
     }
 
     public V get(K key) {
-        synchronized (data) {
+        synchronized (lockObj) {
             this.requests++;
 
             CacheObject cacheObject = data.get(key);
@@ -75,7 +85,7 @@ public class CityTTLCache<K, V> {
 
         List<K> expiredObjects = new ArrayList<>();
 
-        synchronized (data) {
+        synchronized (lockObj) {
             for(K key : data.keySet()) {
                 CacheObject cacheObject = data.get(key);
 
@@ -84,7 +94,7 @@ public class CityTTLCache<K, V> {
         }
 
         for(K key: expiredObjects) {
-            synchronized (data) {
+            synchronized (lockObj) {
                 data.remove(key);
             }
 
@@ -93,7 +103,7 @@ public class CityTTLCache<K, V> {
     }
 
     public void clean() {
-        synchronized (data) {
+        synchronized (lockObj) {
             data = new HashMap<>();
             requests = 0;
             hits = 0;
@@ -102,13 +112,13 @@ public class CityTTLCache<K, V> {
     }
 
     public void delete(String key) {
-        synchronized (data) {
+        synchronized (lockObj) {
             data.remove(key);
         }
     }
 
     public int size() {
-        synchronized (data) {
+        synchronized (lockObj) {
             return data.size();
         }
     }
