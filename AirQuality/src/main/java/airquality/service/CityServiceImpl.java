@@ -18,7 +18,7 @@ import java.util.Map;
 @Service
 @Transactional
 public class CityServiceImpl implements CityService{
-    private final String url = "http://api.weatherbit.io/v2.0/current/airquality";
+    private static final String url = "http://api.weatherbit.io/v2.0/current/airquality";
 
     /*
      * CACHE:
@@ -44,9 +44,7 @@ public class CityServiceImpl implements CityService{
 
     @Override
     public City getCityByLatAndLon(Double lat, Double lon) throws IOException, URISyntaxException {
-        City city = consumeFromAPI(url + "?lat=" + lat + "&lon=" + lon);
-
-        return city;
+        return consumeFromAPI(url + "?lat=" + lat + "&lon=" + lon);
     }
 
     @Override
@@ -61,7 +59,7 @@ public class CityServiceImpl implements CityService{
         String response = httpClient.makeRequest(uriBuilder.build().toString());
 
         try {
-            JSONObject fullJSON = (JSONObject) new JSONObject(response);
+            JSONObject fullJSON = new JSONObject(response);
 
             String name = (String) fullJSON.get("city_name");
             String countryCode = (String) fullJSON.get("country_code");

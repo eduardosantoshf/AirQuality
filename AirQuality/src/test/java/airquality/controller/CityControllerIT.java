@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.hamcrest.CoreMatchers.is;
 
 @WebMvcTest(CityController.class)
-public class CityControllerIT {
+class CityControllerIT {
     @Autowired
     private MockMvc mvc;
 
@@ -25,7 +25,7 @@ public class CityControllerIT {
     private CityService cityService;
 
     @Test
-    public void givenCity_whenGetCityByName_thenReturnCityData() throws Exception {
+    void givenCity_whenGetCityByName_thenReturnCityData() throws Exception {
         City aveiro = new City("Aveiro");
 
         when(cityService.getCityByName("Aveiro")).thenReturn(aveiro);
@@ -34,7 +34,7 @@ public class CityControllerIT {
     }
 
     @Test
-    public void givenCity_whenGetCityByLatAndLon_thenReturnCityData() throws Exception {
+    void givenCity_whenGetCityByLatAndLon_thenReturnCityData() throws Exception {
         City aveiro = new City("Aveiro", "PT", 40.64427, -8.64554, 41, 270.784, 57.0, 0.708736, 0.57969,"Molds");
 
         when(cityService.getCityByLatAndLon(40.64427, -8.64554)).thenReturn(aveiro);

@@ -10,18 +10,18 @@ import org.apache.http.util.EntityUtils;
 import java.io.IOException;
 
 public class HTTPClient {
-    private final String key = "21d09b87cc3f45d8ab6b568dbd0823c7";
+    private static final String key = "21d09b87cc3f45d8ab6b568dbd0823c7";
 
-    private CloseableHttpClient httpClient;
+    private CloseableHttpClient client;
 
     public HTTPClient() {
-        this.httpClient = HttpClients.createDefault();
+        this.client = HttpClients.createDefault();
     }
 
     public String makeRequest(String url) throws IOException {
         HttpGet httpGet = new HttpGet(url + "&key=" + key);
 
-        CloseableHttpResponse httpResponse = httpClient.execute(httpGet);
+        CloseableHttpResponse httpResponse = client.execute(httpGet);
         try {
             HttpEntity httpEntity = httpResponse.getEntity();
             return httpEntity != null ? EntityUtils.toString(httpEntity) : null;

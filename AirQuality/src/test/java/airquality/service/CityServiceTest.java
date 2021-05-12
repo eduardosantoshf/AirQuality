@@ -17,7 +17,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(MockitoExtension.class)
-public class CityServiceTest {
+class CityServiceTest {
 
     /*
      * lenient is required because we load some expectations in the setup

@@ -11,7 +11,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
-public class CityRepositoryTest {
+class CityRepositoryTest {
     @Autowired
     private TestEntityManager entityManager;
 
@@ -19,7 +19,7 @@ public class CityRepositoryTest {
     private CityRepository cityRepository;
 
     @Test
-    public void whenFindAveiroByName_ThenReturnAveiroCity() {
+    void whenFindAveiroByName_ThenReturnAveiroCity() {
         City aveiro = new City("Aveiro");
         entityManager.persistAndFlush(aveiro);
 
@@ -28,13 +28,13 @@ public class CityRepositoryTest {
     }
 
     @Test
-    public void whenInvalidCityName_thenReturnNull() {
+    void whenInvalidCityName_thenReturnNull() {
         City cityFromDb = cityRepository.findByName("Does Not Exist");
         assertThat(cityFromDb).isNull();
     }
 
     @Test
-    public void givenSetOfCities_whenFindAll_thenReturnAllCities() {
+    void givenSetOfCities_whenFindAll_thenReturnAllCities() {
         City aveiro = new City("Aveiro");
         City porto = new City("Porto");
         City lisboa = new City("Lisboa");

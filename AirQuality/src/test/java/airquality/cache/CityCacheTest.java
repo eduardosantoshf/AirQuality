@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CityCacheTest {
+class CityCacheTest {
     private static CityCache<String, City> cityCache;
 
     @BeforeEach
@@ -15,7 +15,7 @@ public class CityCacheTest {
     }
 
     @Test
-    public void putTest() {
+    void putTest() {
         City aveiro = new City("Aveiro");
         cityCache.put("Aveiro", aveiro);
 
@@ -23,7 +23,7 @@ public class CityCacheTest {
     }
 
     @Test
-    public void getTest() {
+    void getTest() {
         City porto = new City("Porto");
         cityCache.put("Aveiro", porto);
 
@@ -31,7 +31,7 @@ public class CityCacheTest {
     }
 
     @Test
-    public void deleteTest() {
+    void deleteTest() {
         City aveiro = new City("Aveiro");
         cityCache.put("Aveiro", aveiro);
         int cacheSize = cityCache.size();
@@ -42,7 +42,7 @@ public class CityCacheTest {
     }
 
     @Test
-    public void sizeTest() {
+    void sizeTest() {
         City aveiro = new City("Aveiro");
         cityCache.put("Aveiro", aveiro);
 
@@ -50,7 +50,7 @@ public class CityCacheTest {
     }
 
     @Test
-    public void getHitCountTest() {
+    void getHitCountTest() {
         City aveiro = new City("Aveiro");
         cityCache.put("Aveiro", aveiro);
 
@@ -60,14 +60,14 @@ public class CityCacheTest {
     }
 
     @Test
-    public void getMissCountTest() {
+    void getMissCountTest() {
         cityCache.get("Aveiro");
 
         assertEquals(1, cityCache.getMissCount());
     }
 
     @Test
-    public void getRequestCountTest() {
+    void getRequestCountTest() {
         City aveiro = new City("Aveiro");
 
         cityCache.put("Aveiro", aveiro);

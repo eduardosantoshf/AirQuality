@@ -18,16 +18,12 @@ public class CityController {
 
     @GetMapping("/city/{name}")
     public City getCityByName(@PathVariable(value = "name") String name) throws IOException, URISyntaxException {
-        City city = cityService.getCityByName(name);
-
-        return city;
+        return cityService.getCityByName(name);
     }
 
     @GetMapping("/city/{lat}/{lon}")
     public City getCityByLatAndLon(@PathVariable(value = "lat") Double lat, @PathVariable(value = "lon") Double lon) throws IOException, URISyntaxException {
-        City city = cityService.getCityByLatAndLon(lat, lon);
-
-        return city;
+        return cityService.getCityByLatAndLon(lat, lon);
     }
 
     @GetMapping("/cacheDetails")

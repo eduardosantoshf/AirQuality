@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="2fdae2b5-69ff-409a-863b-1884bc5b705b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/controller/CityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/model/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/model/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/service/CityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/service/CityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/service/HTTPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/service/HTTPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/airquality/cache/CityCacheTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/airquality/cache/CityCacheTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/airquality/cache/CityTTLCacheTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/airquality/cache/CityTTLCacheTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/airquality/controller/CityControllerIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/airquality/controller/CityControllerIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/airquality/repository/CityRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/airquality/repository/CityRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/airquality/selenium/WebpageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/airquality/selenium/WebpageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/airquality/service/CityServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/airquality/service/CityServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +56,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
-  <component name="RunManager" selected="JUnit.All in AirQuality">
+  <component name="RunManager" selected="Spring Boot.AirQualityApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -128,10 +137,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in AirQuality" />
         <item itemvalue="Spring Boot.AirQualityApplication" />
-        <item itemvalue="JUnit.CityControllerTest" />
+        <item itemvalue="JUnit.All in AirQuality" />
         <item itemvalue="JUnit.WebpageTest" />
+        <item itemvalue="JUnit.CityControllerTest" />
         <item itemvalue="JUnit.WebpageTest.searchCacheDetails" />
       </list>
     </recent_temporary>
@@ -171,7 +180,7 @@
       <workItem from="1620660489790" duration="37000" />
       <workItem from="1620743289709" duration="5295000" />
       <workItem from="1620772368380" duration="8149000" />
-      <workItem from="1620824502858" duration="4109000" />
+      <workItem from="1620824502858" duration="5281000" />
     </task>
     <servers />
   </component>

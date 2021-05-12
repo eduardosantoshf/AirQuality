@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 @ExtendWith(SeleniumJupiter.class)
-public class WebpageTest {
+class WebpageTest {
     WebDriver browser = new FirefoxDriver();
 
     @BeforeEach

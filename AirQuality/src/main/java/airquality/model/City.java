@@ -13,9 +13,13 @@ public class City {
 
     private String name;
     private String countryCode;
-    private Double latitude, longitude;
+    private Double latitude;
+    private Double longitude;
     private Integer aqi; // Air Quality Index [US - EPA standard 0 - +500]
-    private Double co, o3, so2, no2; // Concentration of carbon monoxide (µg/m³)
+    private Double co;
+    private Double o3;
+    private Double so2;
+    private Double no2;
     private String predominantPollenType; // Trees / Weeds / Molds / Grasses
 
     /*---------- Constructors ----------*/

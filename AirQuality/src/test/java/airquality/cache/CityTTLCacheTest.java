@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CityTTLCacheTest {
+class CityTTLCacheTest {
     private static CityTTLCache<String, City> cityTTLCache;
 
     @BeforeEach
@@ -15,7 +15,7 @@ public class CityTTLCacheTest {
     }
 
     @Test
-    public void putTest() {
+    void putTest() {
         City aveiro = new City("Aveiro");
         cityTTLCache.put("Aveiro", aveiro);
 
@@ -23,7 +23,7 @@ public class CityTTLCacheTest {
     }
 
     @Test
-    public void getTest() {
+    void getTest() {
         City porto = new City("Porto");
         cityTTLCache.put("Aveiro", porto);
 
@@ -31,7 +31,7 @@ public class CityTTLCacheTest {
     }
 
     @Test
-    public void deleteTest() {
+    void deleteTest() {
         City aveiro = new City("Aveiro");
         cityTTLCache.put("Aveiro", aveiro);
         int cacheSize = cityTTLCache.size();
@@ -42,7 +42,7 @@ public class CityTTLCacheTest {
     }
 
     @Test
-    public void sizeTest() {
+    void sizeTest() {
         City aveiro = new City("Aveiro");
         cityTTLCache.put("Aveiro", aveiro);
 
@@ -50,7 +50,7 @@ public class CityTTLCacheTest {
     }
 
     @Test
-    public void getHitsTest() {
+    void getHitsTest() {
         City aveiro = new City("Aveiro");
         cityTTLCache.put("Aveiro", aveiro);
 
@@ -60,14 +60,14 @@ public class CityTTLCacheTest {
     }
 
     @Test
-    public void getMissesTest() {
+    void getMissesTest() {
         cityTTLCache.get("Aveiro");
 
         assertEquals(1, cityTTLCache.getMisses());
     }
 
     @Test
-    public void getRequestsTest() {
+    void getRequestsTest() {
         City aveiro = new City("Aveiro");
 
         cityTTLCache.put("Aveiro", aveiro);
