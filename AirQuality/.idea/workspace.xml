@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fdae2b5-69ff-409a-863b-1884bc5b705b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AirQuality.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AirQuality.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_auto_auto_common_0_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_auto_service_auto_service_1_0_rc7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_auto_service_auto_service_annotations_1_0_rc7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_devtools_4_0_0_alpha_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_devtools_v84_4_0_0_alpha_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_devtools_v85_4_0_0_alpha_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_devtools_v86_4_0_0_alpha_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_devtools_v87_4_0_0_alpha_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edgehtml_driver_4_0_0_alpha_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_141_59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_xpi_driver_4_0_0_alpha_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_http_4_0_0_alpha_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_4_0_0_alpha_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_json_4_0_0_alpha_7.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,18 +47,22 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
-  <component name="RunManager" selected="Spring Boot.AirQualityApplication">
-    <configuration name="CityControllerIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AirQuality" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="airquality.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="airquality.controller" />
-      <option name="MAIN_CLASS_NAME" value="airquality.controller.CityControllerIT" />
+  <component name="RunManager" selected="JUnit.All in AirQuality">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in AirQuality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AirQuality" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -91,21 +77,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="airquality.controller" />
       <option name="MAIN_CLASS_NAME" value="airquality.controller.CityControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CityServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AirQuality" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="airquality.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="airquality.service" />
-      <option name="MAIN_CLASS_NAME" value="airquality.service.CityServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,6 +97,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebpageTest.searchCacheDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AirQuality" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="airquality.selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="airquality.selenium" />
+      <option name="MAIN_CLASS_NAME" value="airquality.selenium.WebpageTest" />
+      <option name="METHOD_NAME" value="searchCacheDetails" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AirQualityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="AirQuality" />
       <extension name="coverage">
@@ -141,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in AirQuality" />
         <item itemvalue="Spring Boot.AirQualityApplication" />
-        <item itemvalue="JUnit.WebpageTest" />
-        <item itemvalue="JUnit.CityControllerIT" />
-        <item itemvalue="JUnit.CityServiceTest" />
         <item itemvalue="JUnit.CityControllerTest" />
+        <item itemvalue="JUnit.WebpageTest" />
+        <item itemvalue="JUnit.WebpageTest.searchCacheDetails" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +170,8 @@
       <workItem from="1620564665893" duration="4543000" />
       <workItem from="1620660489790" duration="37000" />
       <workItem from="1620743289709" duration="5295000" />
-      <workItem from="1620772368380" duration="3672000" />
+      <workItem from="1620772368380" duration="8149000" />
+      <workItem from="1620824502858" duration="4109000" />
     </task>
     <servers />
   </component>
