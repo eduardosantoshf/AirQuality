@@ -1,25 +1,14 @@
 package airquality.selenium;
 
 import io.github.bonigarcia.seljup.SeleniumJupiter;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.concurrent.TimeUnit;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.startsWith;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(SeleniumJupiter.class)
 public class WebpageTest {
@@ -31,13 +20,40 @@ public class WebpageTest {
     }
 
     @Test
-    void testWithOneFirefox() {
+    void searchCityByName() {
         browser.get("http://127.0.0.1:8000/templates/");
-        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) browser;
+        js.executeScript("window.scrollBy(0,750)");
         browser.manage().window().setSize(new Dimension(1116, 697));
         browser.findElement(By.id("cityToBeSearched")).click();
         browser.findElement(By.id("cityToBeSearched")).sendKeys("Aveiro");
         browser.findElement(By.id("searchBtn")).click();
+        //assertEquals("Name: Aveiro", browser.findElement(By.id("name1")).getText());
+    }
+
+
+    @Test
+    void searchCityByLatAndLon() {
+        browser.get("http://127.0.0.1:8000/templates/");
+
+        JavascriptExecutor js = (JavascriptExecutor) browser;
+        js.executeScript("window.scrollBy(0,1000)");
+        /*
+        try {
+            if (browser.findElements(By.id("searchBtn2")).size() <= 0 && !browser.findElement(By.id("searchBtn2")).isDisplayed()) {
+                WebDriverWait wait2 = new WebDriverWait(browser, 120);
+                wait2.until(ExpectedConditions.visibilityOf(browser.findElement(By.id("searchBtn2"))));
+            }
+        } catch (StaleElementReferenceException e) {
+            return;
+        }
+        */
+        browser.manage().window().setSize(new Dimension(1116, 698));
+        browser.findElement(By.id("latitude")).click();
+        browser.findElement(By.id("latitude")).sendKeys("40.64427");
+        browser.findElement(By.id("longitude")).click();
+        browser.findElement(By.id("longitude")).sendKeys("-8.64554");
+        browser.findElement(By.id("searchBtn2")).click();
     }
 
     @AfterEach
