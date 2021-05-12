@@ -201,6 +201,15 @@
                             <div class="tfclear" id="co1">
                                 <!--Concentration of carbon monoxide (µg/m³)-->
                             </div>
+                            <div class="tfclear" id="o31">
+                                <!--Concentration of carbon monoxide (µg/m³)-->
+                            </div>
+                            <div class="tfclear" id="so21">
+                                <!--Concentration of carbon monoxide (µg/m³)-->
+                            </div>
+                            <div class="tfclear" id="no21">
+                                <!--Concentration of carbon monoxide (µg/m³)-->
+                            </div>
                             <div class="tfclear" id="pollen1">
                                 <!--Predominant pollen type-->
                             </div>
@@ -248,6 +257,15 @@
                                 <!--AQI-->
                             </div>
                             <div class="tfclear" id="co2">
+                                <!--Concentration of carbon monoxide (µg/m³)-->
+                            </div>
+                            <div class="tfclear" id="o32">
+                                <!--Concentration of carbon monoxide (µg/m³)-->
+                            </div>
+                            <div class="tfclear" id="so22">
+                                <!--Concentration of carbon monoxide (µg/m³)-->
+                            </div>
+                            <div class="tfclear" id="no22">
                                 <!--Concentration of carbon monoxide (µg/m³)-->
                             </div>
                             <div class="tfclear" id="pollen2">
@@ -416,6 +434,9 @@
                     document.getElementById("lon1").innerHTML = "<b>Longitude: </b>";
                     document.getElementById("aqi1").innerHTML = "<b>AQI: </b>";
                     document.getElementById("co1").innerHTML = "<b>Concentration of carbon monoxide (µg/m³): </b>";
+                    document.getElementById("o31").innerHTML = "<b>Concentration of surface O3 (µg/m³): </b>";
+                    document.getElementById("so21").innerHTML = "<b>Concentration of surface SO2 (µg/m³): </b>";
+                    document.getElementById("no21").innerHTML = "<b>Concentration of surface NO2 (µg/m³): </b>";
                     document.getElementById("pollen1").innerHTML = "<b>Predominant pollen type: </b>";
                     console.log(data);
                     $('#name1').append(JSON.stringify(data.name, undefined, 2));
@@ -424,6 +445,9 @@
                     $('#lon1').append(JSON.stringify(data.longitude, undefined, 2));
                     $('#aqi1').append(JSON.stringify(data.aqi, undefined, 2));
                     $('#co1').append(JSON.stringify(data.co, undefined, 2));
+                    $('#o31').append(JSON.stringify(data.o3, undefined, 2));
+                    $('#so21').append(JSON.stringify(data.so2, undefined, 2));
+                    $('#no21').append(JSON.stringify(data.no2, undefined, 2));
                     $('#pollen1').append(JSON.stringify(data.predominantPollenType, undefined, 2));
                     
                 },
@@ -456,6 +480,9 @@
                     document.getElementById("lon2").innerHTML = "<b>Longitude: </b>";
                     document.getElementById("aqi2").innerHTML = "<b>AQI: </b>";
                     document.getElementById("co2").innerHTML = "<b>Concentration of carbon monoxide (µg/m³): </b>";
+                    document.getElementById("o32").innerHTML = "<b>Concentration of surface O3 (µg/m³): </b>";
+                    document.getElementById("so22").innerHTML = "<b>Concentration of surface SO2 (µg/m³): </b>";
+                    document.getElementById("no22").innerHTML = "<b>Concentration of surface NO2 (µg/m³): </b>";
                     document.getElementById("pollen2").innerHTML = "<b>Predominant pollen type: </b>";
                     console.log(data);
                     $('#name2').append(JSON.stringify(data.name, undefined, 2));
@@ -464,6 +491,9 @@
                     $('#lon2').append(JSON.stringify(data.longitude, undefined, 2));
                     $('#aqi2').append(JSON.stringify(data.aqi, undefined, 2));
                     $('#co2').append(JSON.stringify(data.co, undefined, 2));
+                    $('#o32').append(JSON.stringify(data.o3, undefined, 2));
+                    $('#so22').append(JSON.stringify(data.so2, undefined, 2));
+                    $('#no22').append(JSON.stringify(data.no2, undefined, 2));
                     $('#pollen2').append(JSON.stringify(data.predominantPollenType, undefined, 2));
                     
                 },
