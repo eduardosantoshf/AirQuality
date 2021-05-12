@@ -74,9 +74,12 @@ public class CityServiceImpl implements CityService{
 
             Integer aqi = (Integer) dataObject.get("aqi");
             Double co = Double.parseDouble(dataObject.get("co").toString());
+            Double o3 = Double.parseDouble(dataObject.get("o3").toString());
+            Double so2 = Double.parseDouble(dataObject.get("so2").toString());
+            Double no2 = Double.parseDouble(dataObject.get("no2").toString());
             String predominantPollenType = (String) dataObject.get("predominant_pollen_type");
 
-            City city = new City(name, countryCode, lat, lon, aqi, co, predominantPollenType);
+            City city = new City(name, countryCode, lat, lon, aqi, co, o3, so2, no2, predominantPollenType);
 
             return city;
 
