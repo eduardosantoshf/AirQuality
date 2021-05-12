@@ -35,7 +35,7 @@ public class CityControllerIT {
 
     @Test
     public void givenCity_whenGetCityByLatAndLon_thenReturnCityData() throws Exception {
-        City aveiro = new City("Aveiro", "PT", 40.64427, -8.64554, 41, 270.784, "Molds");
+        City aveiro = new City("Aveiro", "PT", 40.64427, -8.64554, 41, 270.784, 57.0, 0.708736, 0.57969,"Molds");
 
         when(cityService.getCityByLatAndLon(40.64427, -8.64554)).thenReturn(aveiro);
 
