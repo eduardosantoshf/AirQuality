@@ -1,4 +1,4 @@
-name: AirQuality CI script
+name: CI Script
 
 # Controls when the action will run. 
 on:
@@ -13,6 +13,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
+    name: Build Maven Project
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -38,3 +39,22 @@ jobs:
         run: |
           cd AirQuality/target
           ls -la
+  
+  sonar_qube:
+    name: SonarCloud Code Code Inspection
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Step 1 - Checkout main branch from Github
+        uses: actions/checkout@v2
+
+      - name: Step 2 - Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Step 3 - SonarQube Scan Test
+        run: mvn -B clean verify -Psonar -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
