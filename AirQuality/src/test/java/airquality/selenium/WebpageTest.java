@@ -56,6 +56,22 @@ public class WebpageTest {
         browser.findElement(By.id("searchBtn2")).click();
     }
 
+    @Test
+    void searchCacheDetails() {
+        browser.get("http://127.0.0.1:8000/templates/");
+        JavascriptExecutor js = (JavascriptExecutor) browser;
+        js.executeScript("window.scrollBy(0,1500)");
+        try {
+            if (browser.findElements(By.id("searchBtn3")).size() <= 0 && !browser.findElement(By.id("searchBtn3")).isDisplayed()) {
+                WebDriverWait wait2 = new WebDriverWait(browser, 120);
+                wait2.until(ExpectedConditions.visibilityOf(browser.findElement(By.id("searchBtn3"))));
+                browser.findElement(By.id("searchBtn3")).click();
+            }
+        } catch (StaleElementReferenceException e) {
+            return;
+        }
+    }
+
     @AfterEach
     void tearDown() {
         browser.close();
