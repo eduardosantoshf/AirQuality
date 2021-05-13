@@ -1,7 +1,6 @@
 package airquality.model;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
 @Table(name = "city")
@@ -49,100 +48,60 @@ public class City {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getCountryCode() {
         return countryCode;
     }
 
-    public void setCountryCode(String countryCode) {
-        this.countryCode = countryCode;
-    }
-
     public Double getLatitude() {
         return latitude;
-    }
-
-    public void setLatitude(Double latitude) {
-        this.latitude = latitude;
     }
 
     public Double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Double longitude) {
-        this.longitude = longitude;
-    }
-
     public Integer getAqi() {
         return aqi;
-    }
-
-    public void setAqi(Integer aqi) {
-        this.aqi = aqi;
     }
 
     public Double getCo() {
         return co;
     }
 
-    public void setCo(Double co) {
-        this.co = co;
-    }
-
     public Double getO3() {
         return o3;
-    }
-
-    public void setO3(Double o3) {
-        this.o3 = o3;
     }
 
     public Double getSo2() {
         return so2;
     }
 
-    public void setSo2(Double so2) {
-        this.so2 = so2;
-    }
-
     public Double getNo2() {
         return no2;
-    }
-
-    public void setNo2(Double no2) {
-        this.no2 = no2;
     }
 
     public String getPredominantPollenType() {
         return predominantPollenType;
     }
 
-    public void setPredominantPollenType(String predominantPollenType) {
-        this.predominantPollenType = predominantPollenType;
-    }
-
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        City city = (City) o;
-        return Objects.equals(id, city.id) && Objects.equals(name, city.name) && Objects.equals(countryCode, city.countryCode) && Objects.equals(latitude, city.latitude) && Objects.equals(longitude, city.longitude) && Objects.equals(aqi, city.aqi) && Objects.equals(co, city.co) && Objects.equals(o3, city.o3) && Objects.equals(so2, city.so2) && Objects.equals(no2, city.no2) && Objects.equals(predominantPollenType, city.predominantPollenType);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, countryCode, latitude, longitude, aqi, co, o3, so2, no2, predominantPollenType);
+    public String toString() {
+        return "City{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", countryCode='" + countryCode + '\'' +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                ", aqi=" + aqi +
+                ", co=" + co +
+                ", o3=" + o3 +
+                ", so2=" + so2 +
+                ", no2=" + no2 +
+                ", predominantPollenType='" + predominantPollenType + '\'' +
+                '}';
     }
 }

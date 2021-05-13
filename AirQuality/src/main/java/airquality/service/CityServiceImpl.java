@@ -1,6 +1,5 @@
 package airquality.service;
 
-import airquality.cache.CityCache;
 import airquality.cache.CityTTLCache;
 import airquality.model.City;
 import org.apache.http.client.utils.URIBuilder;
