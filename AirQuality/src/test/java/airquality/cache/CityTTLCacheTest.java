@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 class CityTTLCacheTest {
     private static CityTTLCache<String, City> cityTTLCache;
@@ -76,4 +77,34 @@ class CityTTLCacheTest {
 
         assertEquals(2, cityTTLCache.getRequests());
     }
+
+    @Test
+    void getCacheDetailsTest() {
+        cityTTLCache = new CityTTLCache<>(5, 5);
+        City aveiro = new City("Aveiro");
+        cityTTLCache.put("Aveiro", aveiro);
+
+        assertEquals(1, cityTTLCache.size());
+    }
+
+    @Test
+    void objectExpiredTest() throws InterruptedException {
+        cityTTLCache = new CityTTLCache<>(5, 5);
+        City aveiro = new City("Aveiro");
+
+        cityTTLCache.put("Aveiro", aveiro);
+        Thread.sleep((10) * 1000);
+        assertNull(cityTTLCache.get("one"));
+    }
+
+    @Test
+    void objectNotExpiredTest() throws InterruptedException {
+        cityTTLCache = new CityTTLCache(5, 5);
+        City aveiro = new City("Aveiro");
+
+        cityTTLCache.put("Aveiro", aveiro);
+        Thread.sleep(5);
+        assertEquals(aveiro, cityTTLCache.get("Aveiro"));
+    }
+
 }

@@ -21,7 +21,7 @@ class WebpageTest {
 
     @Test
     void searchCityByName() {
-        browser.get("http://127.0.0.1:8000/templates/");
+        browser.get("http://127.0.0.1:8000/");
         JavascriptExecutor js = (JavascriptExecutor) browser;
         js.executeScript("window.scrollBy(0,750)");
         browser.manage().window().setSize(new Dimension(1116, 697));
@@ -34,7 +34,7 @@ class WebpageTest {
 
     @Test
     void searchCityByLatAndLon() {
-        browser.get("http://127.0.0.1:8000/templates/");
+        browser.get("http://127.0.0.1:8000/");
 
         JavascriptExecutor js = (JavascriptExecutor) browser;
         js.executeScript("window.scrollBy(0,1000)");
@@ -57,7 +57,7 @@ class WebpageTest {
 
     @Test
     void searchCacheDetails() {
-        browser.get("http://127.0.0.1:8000/templates/");
+        browser.get("http://127.0.0.1:8000/");
         JavascriptExecutor js = (JavascriptExecutor) browser;
         js.executeScript("window.scrollBy(0,1500)");
 
