@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2fdae2b5-69ff-409a-863b-1884bc5b705b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/cache/CityCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/cache/CityCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/cache/CityCacheItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/cache/CityCacheItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/cache/CityTTLCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/cache/CityTTLCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/service/CityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/service/CityServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/service/HTTPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/service/HTTPClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/airquality/service/CityServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/airquality/service/CityServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +37,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -52,18 +47,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
-  <component name="RunManager" selected="Spring Boot.AirQualityApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.WebpageTest">
     <configuration name="All in AirQuality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AirQuality" />
       <option name="PACKAGE_NAME" value="" />
@@ -133,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.AirQualityApplication" />
         <item itemvalue="JUnit.WebpageTest" />
+        <item itemvalue="Spring Boot.AirQualityApplication" />
         <item itemvalue="JUnit.All in AirQuality" />
         <item itemvalue="JUnit.CityControllerTest" />
         <item itemvalue="JUnit.WebpageTest.searchCacheDetails" />
@@ -176,7 +160,8 @@
       <workItem from="1620660489790" duration="37000" />
       <workItem from="1620743289709" duration="5295000" />
       <workItem from="1620772368380" duration="8149000" />
-      <workItem from="1620824502858" duration="7855000" />
+      <workItem from="1620824502858" duration="9138000" />
+      <workItem from="1620858585464" duration="352000" />
     </task>
     <servers />
   </component>
