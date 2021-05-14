@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 @ExtendWith(SeleniumJupiter.class)
 class WebpageTest {
     WebDriver browser = new FirefoxDriver();
@@ -28,7 +30,7 @@ class WebpageTest {
         browser.findElement(By.id("cityToBeSearched")).click();
         browser.findElement(By.id("cityToBeSearched")).sendKeys("Aveiro");
         browser.findElement(By.id("searchBtn")).click();
-        //assertEquals("Name: Aveiro", browser.findElement(By.id("name1")).getText());
+        assertEquals("Name: \"Aveiro\"", browser.findElement(By.id("name1")).getText());
     }
 
 
@@ -49,6 +51,7 @@ class WebpageTest {
                 browser.findElement(By.id("longitude")).click();
                 browser.findElement(By.id("longitude")).sendKeys("-8.64554");
                 browser.findElement(By.id("searchBtn2")).click();
+                assertEquals("Name: \"Aveiro\"", browser.findElement(By.id("name2")).getText());
             }
         } catch (StaleElementReferenceException e) {
             return;
@@ -66,6 +69,7 @@ class WebpageTest {
                 WebDriverWait wait2 = new WebDriverWait(browser, 120);
                 wait2.until(ExpectedConditions.visibilityOf(browser.findElement(By.id("searchBtn3"))));
                 browser.findElement(By.id("searchBtn3")).click();
+                assertEquals("hits: 0", browser.findElement(By.id("hits")).getText());
             }
         } catch (StaleElementReferenceException e) {
             return;
