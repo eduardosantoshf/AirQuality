@@ -52,7 +52,7 @@ When everything is up and running, the website can be accessed at: http://localh
 
 ## Demo
 
-Demo video will be available soon!
+The demo video is inside the root directory of this repository.
 
 ## SonarQube Dashboard
 
