@@ -4,7 +4,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=eduardosantoshf_AirQuality&metric=alert_status)](https://sonarcloud.io/dashboard?id=eduardosantoshf_AirQuality)
 
 <p align="center">
-    <img style="height: 40px" src="./images/AirQuality_logo.png">
+    <img style="height: 30px" src="./images/AirQuality_logo.png">
 </p>
 
 ## Course
