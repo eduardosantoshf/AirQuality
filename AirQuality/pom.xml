@@ -17,6 +17,9 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <sonar.projectKey>eduardosantoshf_AirQuality</sonar.projectKey>
+        <sonar.organization>air-quality</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <dependencies>
