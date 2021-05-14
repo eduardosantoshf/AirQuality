@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2fdae2b5-69ff-409a-863b-1884bc5b705b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/cache/CityCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/cache/CityCacheItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/model/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/model/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airquality/service/CityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airquality/service/CityServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/airquality/cache/CityCacheTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/airquality/cache/CityTTLCacheTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/airquality/cache/CityTTLCacheTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/airquality/controller/CityControllerIT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/airquality/selenium/WebpageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/airquality/selenium/WebpageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,37 +48,16 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Diagrams" />
   </component>
-  <component name="RunManager" selected="JUnit.CityTTLCacheTest.getCacheDetailsTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.WebpageTest">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in AirQuality" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AirQuality" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CityTTLCacheTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AirQuality" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="airquality.cache.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="airquality.cache" />
-      <option name="MAIN_CLASS_NAME" value="airquality.cache.CityTTLCacheTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -106,33 +78,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CityTTLCacheTest.objectExpiredTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WebpageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AirQuality" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="airquality.cache.*" />
+          <option name="PATTERN" value="airquality.selenium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="airquality.cache" />
-      <option name="MAIN_CLASS_NAME" value="airquality.cache.CityTTLCacheTest" />
-      <option name="METHOD_NAME" value="objectExpiredTest" />
+      <option name="PACKAGE_NAME" value="airquality.selenium" />
+      <option name="MAIN_CLASS_NAME" value="airquality.selenium.WebpageTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebpageTest.searchCacheDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AirQuality" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="airquality.selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="airquality.selenium" />
+      <option name="MAIN_CLASS_NAME" value="airquality.selenium.WebpageTest" />
+      <option name="METHOD_NAME" value="searchCacheDetails" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CityTTLCacheTest.objectNotExpiredTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WebpageTest.searchCityByLatAndLon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AirQuality" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="airquality.cache.*" />
+          <option name="PATTERN" value="airquality.selenium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="airquality.cache" />
-      <option name="MAIN_CLASS_NAME" value="airquality.cache.CityTTLCacheTest" />
-      <option name="METHOD_NAME" value="objectNotExpiredTest" />
+      <option name="PACKAGE_NAME" value="airquality.selenium" />
+      <option name="MAIN_CLASS_NAME" value="airquality.selenium.WebpageTest" />
+      <option name="METHOD_NAME" value="searchCityByLatAndLon" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebpageTest.searchCityByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AirQuality" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="airquality.selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="airquality.selenium" />
+      <option name="MAIN_CLASS_NAME" value="airquality.selenium.WebpageTest" />
+      <option name="METHOD_NAME" value="searchCityByName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WebpageTest" />
+        <item itemvalue="JUnit.WebpageTest.searchCacheDetails" />
+        <item itemvalue="JUnit.WebpageTest.searchCityByLatAndLon" />
+        <item itemvalue="JUnit.WebpageTest.searchCityByName" />
         <item itemvalue="JUnit.CityTTLCacheTest.getCacheDetailsTest" />
-        <item itemvalue="JUnit.CityTTLCacheTest.objectNotExpiredTest" />
-        <item itemvalue="JUnit.CityTTLCacheTest.objectExpiredTest" />
-        <item itemvalue="JUnit.CityTTLCacheTest" />
-        <item itemvalue="JUnit.All in AirQuality" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +190,8 @@
       <workItem from="1620858585464" duration="352000" />
       <workItem from="1620919370945" duration="806000" />
       <workItem from="1620923886346" duration="3433000" />
-      <workItem from="1620943463741" duration="3564000" />
+      <workItem from="1620943463741" duration="3752000" />
+      <workItem from="1620999768121" duration="3942000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,7 @@
 # AirQuality
 
 ![example workflow](https://github.com/eduardosantoshf/TQSIndividualProject/actions/workflows/main.yml/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=eduardosantoshf_AirQuality&metric=alert_status)](https://sonarcloud.io/dashboard?id=eduardosantoshf_AirQuality)
 
 <p align="center">
     <img style="height: 40px" src="./images/AirQuality_logo.png">
