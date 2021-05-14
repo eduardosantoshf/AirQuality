@@ -3,7 +3,7 @@
 ![example workflow](https://github.com/eduardosantoshf/TQSIndividualProject/actions/workflows/main.yml/badge.svg)
 
 <p align="center">
-    <img style="height: 50px" src="./images/AirQuality_logo.png">
+    <img style="height: 45px" src="./images/AirQuality_logo.png">
 </p>
 
 ## Course
