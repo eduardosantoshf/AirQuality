@@ -56,7 +56,7 @@ Demo video will be available soon!
 
 ## SonarQube Dashboard
 
-SonarQube Dashboard will be available soon!
+The SonarQube dashboard can be accessed at: https://sonarcloud.io/dashboard?id=eduardosantoshf_AirQuality
 
 ## System Architecture
 <p align="center">
