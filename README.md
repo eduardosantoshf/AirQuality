@@ -14,7 +14,7 @@ This project was developed under the [Software Quality And Tests](https://www.ua
 
 This report presents the midterm individual project required for TQS, covering both the software product features and the adopted quality assurance strategy.
 
-The objective of this project was to create a REST-API service, along with the implementation of tests to verify if everything in the application is working properly. These tests included:
+The objective of this project was to create a **REST-API service**, along with the implementation of tests to verify if everything in the application is working properly. These tests included:
 * Unit tests.
 * Unit tests with dependency isolation using mocks.
 * Integration tests on API.
