@@ -54,9 +54,9 @@ When everything is up and running, the website can be accessed at: http://localh
 
 The demo video is inside the root directory of this repository.
 
-## SonarQube Dashboard
+## SonarCloud Dashboard
 
-The SonarQube dashboard can be accessed at: https://sonarcloud.io/dashboard?id=eduardosantoshf_AirQuality
+The SonarCloud dashboard can be accessed at: https://sonarcloud.io/dashboard?id=eduardosantoshf_AirQuality
 
 ## System Architecture
 <p align="center">
