@@ -1,16 +1,4 @@
-# AirQuality
-
-![example workflow](https://github.com/eduardosantoshf/TQSIndividualProject/actions/workflows/main.yml/badge.svg)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=eduardosantoshf_AirQuality&metric=alert_status)](https://sonarcloud.io/dashboard?id=eduardosantoshf_AirQuality)
-
-<p align="center">
-    <img style="height: 30px" src="./images/AirQuality_logo.png">
-</p>
-
-## Course
-This project was developed under the [Software Quality And Tests](https://www.ua.pt/en/uc/8109) course of [University of Aveiro](https://www.ua.pt/).
-
-## Overview of the work
+# TQS Individual Project
 
 This report presents the midterm individual project required for TQS, covering both the software product features and the adopted quality assurance strategy.
 
@@ -20,7 +8,17 @@ The objective of this project was to create a **REST-API service**, along with t
 * Integration tests on API.
 * Functional tests.
 
+## Course
+This project was developed under the [Software Quality And Tests](https://www.ua.pt/en/uc/8109) course of [University of Aveiro](https://www.ua.pt/).
+
 ## AirQuality
+
+![example workflow](https://github.com/eduardosantoshf/TQSIndividualProject/actions/workflows/main.yml/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=eduardosantoshf_AirQuality&metric=alert_status)](https://sonarcloud.io/dashboard?id=eduardosantoshf_AirQuality)
+
+<p align="center">
+    <img style="height: 30px" src="./images/AirQuality_logo.png">
+</p>
 
 The AirQuality product allows its user to get air quality data from a specific city, showing, for instance, the AQI (Air Quality Index) and some concentration levels (CO, O3, SO2, NO2), as well as the predominant pollen type of that specific city.
 
@@ -67,6 +65,9 @@ The SonarCloud dashboard can be accessed at: https://sonarcloud.io/dashboard?id=
 <p align="center">
     <img style="height: 500px" src="./images/UML_classes_diagram.png">
 </p>
+
+## Grade 
+This project's grade was **18** out of 20.
 
 ## Authors
 * **Eduardo Santos**: [eduardosantoshf](https://github.com/eduardosantoshf)
